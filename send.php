@@ -1,10 +1,10 @@
 <?php
 
-if (mail("kesalov0@gmail.com",
+if (mail("kesovstavros0@gmail.com",
     "Новая программа должна пройти модерацию" ,
     "Текст:" .$txt."/n". 
     "фаил:".$apk."/n"., 
-    "from:kesovstavros0@gmail.com /r/n"
+    "from: kesalov@kesalov.org /r/n"
     
     )
 
