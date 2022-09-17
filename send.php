@@ -14,6 +14,10 @@ if (mail("kesovstavros0@gmail.com",
     "from: kesalov@kesalov.org /r/n"
     
     )
+    {
+        echo ('приложение успешно отправлено на модерацию'} 
+    } 
+   ) 
 
 
 ?>
