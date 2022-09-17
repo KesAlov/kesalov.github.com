@@ -1,0 +1,47 @@
+<html>
+
+<head>
+
+<script>
+
+function loaddata(){
+
+var tmp = new Array();    // два вспомогательных
+
+  var tmp2 = new Array();  // массива
+
+  get = new Array();
+
+  var url = location.search;    // строка GET запроса
+
+  if(url != '') {
+
+    tmp = (url.substr(1)).split('&');   // разделяем переменные
+
+    for(var i=0; i < tmp.length; i++) {
+
+      tmp2 = tmp[i].split('=');     // массив get будет содержать
+
+      get[tmp2[0]] = tmp2[1];       // пары ключ(имя переменной)->значение
+
+    }
+
+  }
+
+//дальше заполняем все, что нам надо данными из массива get
+
+document.getElementById("txt").innerHTML = get['txt'];
+
+}
+
+</script>
+
+</head>
+
+<body onLoad='loaddata()'>
+
+<span style="color: red;" name="txt" id="txt"></span>
+
+</body>
+
+</html>
