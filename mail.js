@@ -17,3 +17,33 @@ const firebaseConfig = {
   }; 
 
 firebase.initializeApp(firebaseConfig);
+
+var CONTANTFORMDB = firebase.database().ref(singinform);
+
+document.GetElementById('singinform).AddEventListener("submit", SubmitForm);
+
+function SubmitForm(e)  {
+    e.PreventDefault();
+    
+    var name = GetElementVal('name');
+    var emailid = GetElementVal('emailid'); 
+    var passworld = GetElementVal('passworld'); 
+    
+    
+} 
+
+const Savemessages(name, Emailid, passworld) => {
+    var newsinginform = singinformDB.push();
+    
+    Newsinginform.set({
+        
+        name: name, 
+        Emailid: emailid, 
+        Passworld: passworld, 
+
+});    
+   } 
+
+const getelementval = (id) => {
+    return document.GetElementById(id).value;
+} 
