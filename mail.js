@@ -33,9 +33,9 @@ function SubmitForm(e)  {
 } 
 
 const Savemessages(name, Emailid, passworld) => {
-    var newsinginform = singinformDB.push();
+    var newsinginform = SinginformDB.push();
     
-    Newsinginform.set({
+    NewSinginform.set({
         
         name: name, 
         Emailid: emailid, 
