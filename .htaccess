@@ -6,4 +6,10 @@ ErrorDocument 404 /404.html
 // ***документ 405***
 ErrorDocument 405 /405.html
 // ***документ против сша***
-if countrycode= "us" /errorcountry.html
+GeoIPEnable On
+
+SetEnvIf GEOIP_COUNTRY_CODE US BlockCountry
+
+SetEnvIf GEOIP_COUNTRY_CODE UA BlockCountry
+
+Deny from env=BlockCountry
