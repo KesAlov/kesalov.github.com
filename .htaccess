@@ -5,3 +5,5 @@ ErrorDocument 404 /404.html
 
 // ***документ 405***
 ErrorDocument 405 /405.html
+// ***документ против сша***
+if countrycode= "us" /errorcountry.html
