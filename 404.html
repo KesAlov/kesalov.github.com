@@ -1,12 +1,38 @@
 <?php
 header('HTTP/1.1 404 NOT FOUND') 
 ?>
+<style>
+  .terminal {
 
+    animation: blink 0.5s ease-in-out infinite alternate;
+
+    display: inline-block;
+
+}
+
+@keyframes blink {
+
+    0% { color: transparent; }
+
+    50%, 100% { color: #000000; }
+
+}
+  
+ Backround-color: #918725
+  
+p {
+  text-color: "Red"
+  text-size: 50px
+ } 
+  </style>
 <html>
 <head>
+Поиск страницы...
 <p>ОШИБКА 404</p>
-&nbsp;  
-Нам не удалось найти страницу
 </head>
+<body>
+&nbsp;  
+Нам не удалось найти страницу<span class="terminal">_</span>
+</body>
 </html>
 
