@@ -156,6 +156,92 @@
 
 </LinearLayout>
 
+window.onload = function(){
+
+   window.setInterval(
+
+	function(){	    var d = new Date();
+
+	    document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+
+	}
+
+  , 1000);
+
+}
+
+window.onload = function(){/*бла-бла-бла*/}
+
+window.setInterval(function(){/*Тут действия, обернутые в функцию, которую нужно выполнять каждые 1000 миллисекунд*/} , 1000);
+
+var d = new Date();
+
+document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+
+var t_sec = 6*d.getSeconds();  //Определяем угол для секунд
+
+var t_min = 6*(d.getMinutes() + (1/60)*d.getSeconds()); //Определяем угол для минут
+
+var t_hour = 30*(d.getHours() + (1/60)*d.getMinutes());  //Определяем угол для часов
+
+contextHTML.moveTo(xCenterClock, yCenterClock);
+
+contextHTML.lineTo(xCenterClock + lengthSeconds*Math.cos(Math.PI/2 - t_sec*(Math.PI/180)), 
+
+                    yCenterClock - lengthSeconds*Math.sin(Math.PI/2 - t_sec*(Math.PI/180)));
+		    
+		    for(var th = 1; th <= 12; th++){
+
+	contextHTML.beginPath();
+
+	contextHTML.font = 'bold 25px sans-serif';
+
+	var xText = xCenterClock + (radiusNum - 30) * Math.cos(-30*th*(Math.PI/180) + Math.PI/2);
+
+	var yText = yCenterClock - (radiusNum - 30) * Math.sin(-30*th*(Math.PI/180) + Math.PI/2);
+
+	//Следующий кусок когда учитывает то, что симметричность оцифровки зависит от ширины цифры
+
+	//Начиная с "10" часов это нужно корректировать(!)
+
+	if(th <= 9){
+
+	    contextHTML.strokeText(th, xText - 5 , yText + 10);
+
+	}else{
+
+	    contextHTML.strokeText(th, xText - 15 , yText + 10);
+
+	}
+
+     	contextHTML.stroke();
+
+	contextHTML.closePath();	
+
+}
+		    
+		    
 </script>
+<style>
+#clock{
+
+  font-family:Tahoma, sans-serif;
+
+  font-size:20px;
+
+  font-weight:bold;
+
+  color:#0000cc;	}
+  
+
+
+
+
+
+</style>
 <html>
-<input type="Analogclock" id="Analogclock2">
+ <div id='clock'></div> <br>
+
+	 <canvas height='480' width='480' id='myCanvas'></canvas> <div id='clock'>Тут будет текущее время</div> <br>
+
+	 <canvas height='480' width='480' id='myCanvas'></canvas>
