@@ -1,0 +1,422 @@
+<script>
+		// инициализация		function Vec (x_, y_) {
+
+			if (typeof x_ == 'object') {
+
+				this.setV(x_);
+
+				return;
+
+			}
+
+			this.x= typeof x_ == 'number' ? x_ : 0;
+
+			this.y= typeof y_ == 'number' ? y_ : 0;
+
+		}
+
+		Vec.prototype = {
+
+			// установка в 0
+
+			setZero: function() {
+
+				this.x = 0.0;
+
+				this.y = 0.0;
+
+			},
+
+			// установка значений x и y
+
+			set: function(x_, y_) {this.x=x_; this.y=y_;},
+
+			// установка значений из объекта
+
+			setV: function(v) {
+
+				this.x=v.x;
+
+				this.y=v.y;
+
+			},
+
+			// реверс вектора
+
+			negative: function(){
+
+				return new Vec(-this.x, -this.y);
+
+			},
+
+			// копия вектора
+
+			copy: function(){
+
+				return new Vec(this.x,this.y);
+
+			},
+
+			// сложение с вектором
+
+			add: function(v) {
+
+				this.x += v.x; this.y += v.y;
+
+				return this;
+
+			},
+
+			// вычетание вектора
+
+			mubtract: function(v) {
+
+				this.x -= v.x; this.y -= v.y;
+
+				return this;
+
+			},
+
+			// умножение на число
+
+			multiply: function(a) {
+
+				this.x *= a; this.y *= a;
+
+				return this;
+
+			},
+
+			// деление на число
+
+			div: function(a) {
+
+				this.x /= a; this.y /= a;
+
+				return this;
+
+			},
+
+			// получение длины вектора
+
+			length: function() {
+
+				return Math.sqrt(this.x * this.x + this.y * this.y);
+
+			},
+
+			// нормализация вектора (приведение к вектору с длиной = 1)
+
+			normalize: function() {
+
+				var length = this.length();
+
+				if (length < Number.MIN_VALUE) {
+
+					return 0.0;
+
+				}
+
+				var invLength = 1.0 / length;
+
+				this.x *= invLength;
+
+				this.y *= invLength;
+
+				return length;
+
+			},
+
+			// получение угла вектора
+
+			angle: function () {
+
+				var x = this.x;
+
+				var y = this.y;
+
+				if (x == 0) {
+
+					return (y > 0) ? (3 * Math.PI) / 2 : Math.PI / 2;
+
+				}
+
+				var result = Math.atan(y/x);
+
+				result += Math.PI/2;
+
+				if (x < 0) result = result - Math.PI;
+
+				return result;
+
+			},
+
+			// получение растояния до другого вектора (полезно если вектором задается положение спрайта)
+
+			distanceTo: function (v) {
+
+				return Math.sqrt((v.x - this.x) * (v.x - this.x) + (v.y - this.y) * (v.y - this.y));
+
+			},
+
+			// получение вектора проведенного от вершины x,y данного вектора до вершины x,y другого вектора  
+
+			vectorTo: function (v) {
+
+				return new Vec(v.x - this.x, v.y - this.y);
+
+			},
+
+			// поворот вектора на заданный угл
+
+			rotate: function (angle) {
+
+				var length = this.length();
+
+				this.x = Math.sin(angle) * length;
+
+				this.y = Math.cos(angle) * (-length);
+
+				return this;
+
+			}
+
+	}; 
+  
+  game.create('Block', {x: 100, y: 150});
+  
+  	create: function (objectName, params) {
+
+			// для удобства все классы доступные для создание через фабричный метод хранятся в Game.classes
+
+			// Создаем объект получая его класс из Game.classes
+
+			var object = new Game.classes[objectName](params);
+
+			// присваиваем ему уникальный идентефикатор
+
+			object.id = ++this.idx;
+
+			// задаем объекту ссылку на игровой мир
+
+			object.game = this;
+
+			// добавляем получившийся объект в массив игровых объектов
+
+			this.objects[object.id] = object;
+
+			// если объект может сталкиваться с другими объектами то дополнительно
+
+			// помещаем ссылку на него в соответствующий массив
+
+			if (object.isColliding) this.collidingObjects[object.id] = object;
+
+			// сообщаем объекту что он полностью подключен к игровому миру
+
+			// с помощью вызова метода birth, в котором он может завершить инициализацию
+
+			object.birth();
+
+			// возвращаем готовый объект
+
+			return object;
+
+		},
+      
+      !function () {
+
+	var WIDTH = 20;
+
+	var HEIGHT = 12;
+
+	var B = 'Block';
+
+	var P = 'Bonus';
+
+	var MAP = [
+
+		,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,
+
+		, B,  B, B,  , B, B, B,  , B,  ,  ,  , B,  ,  ,  , B, B, B,
+
+		, B,  , B,  , B,  ,  B  , P,  ,  ,  , B,  ,  ,  , B,  , B,
+
+		, B, B, B,  , B, B, B,  , P,  ,P  ,  , B,  ,  ,  , B,  , B,
+
+		, , ,  , , ,  ,, ,  ,  ,  , P,  ,  ,  , B,  ,  ,  , B,  , P,
+
+		, B,  , B,  , P, P, P,  , P, B, B,  , B, B, B,  , B, B, B,
+
+		,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,
+
+		, P,  , P,  , , , B, B,  , B, B,, ,  , B, B, B,  ,  ,  ,  ,
+
+		,, ,  , P,  ,, ,  , B,  ,, ,  ,, ,  , B,  , B,  ,  ,  ,  ,
+
+		, B,, , B,  , B, B, B,  , B, B,  ,  , B, B,  ,  ,  ,  ,  ,
+
+		, B,  , B,  , B,  , B,  , B,  , B,  , B,  , B,  ,  ,  ,  ,
+
+		, B,  , B,  , B,  , B,  , , , B, B,  , B,  , B,  , P,  ,  ,
+
+	];
+
+	Game.maps['Hello'] = Game.Map.extend({
+
+		build: function () {
+
+			var blockSize = 20;
+
+			for (var i = 0; i < HEIGHT; i++) {
+
+				for (var j = 0; j < WIDTH; j++) {
+
+					var index = WIDTH * i + j;
+
+					if (MAP[index]) this.game.create(MAP[index], {x: blockSize * j, y: blockSize * i});
+
+				}
+
+			}
+
+		}
+
+	})
+
+}();
+      
+      
+      
+  var ParkMillerGenerator = function (initializer) {
+
+		this.a = 16807;
+
+		this.m = 2147483647;
+
+		this.val = initializer || Math.round(2147483647 / 3);
+
+	}
+
+	ParkMillerGenerator.prototype = {
+
+		next: function () {
+
+			this.val = (this.a * this.val) % this.m;
+
+			return (this.val / 1000000) % 1;
+
+		}
+
+	}
+  
+ var initializer = 333; // задаеем инициализирующее число, у всех клиентов оно должно быть одинаковое
+
+	var gen = new ParkMillerGenerator(initializer); // создаем ГПСЧ
+
+	gen.next(); // 0.5967310000000001
+
+	gen.next(); // 0.46109599999999773
+
+	gen.next(); // 0.07891199999994569;
+  
+  #!/bin/sh
+
+### BEGIN INIT INFO
+
+# Provides:          bugsarena
+
+# Required-Start:    $local_fs $remote_fs $network $syslog
+
+# Required-Stop:     $local_fs $remote_fs $network $syslog
+
+# Default-Start:     2 3 4 5
+
+# Default-Stop:      0 1 6
+
+# Short-Description: starts the bugsarena servers
+
+# Description:       starts the bugsarena servers
+
+### END INIT INFO
+
+# задаем пути и параметры к исполняемым файлам (нужно указать свои)
+
+NODE=/usr/bin/node
+
+DAEMON_SERVER=/home/me/projects/bugs-arena/server/server.js
+
+SERVER_PARAMS="name=Arena-Dogfight map=Dogfight port=8090"
+
+NAME=bugsarena
+
+DESC="bugsarena servers"
+
+# сервис должен принимать 3 команды - start, stop и restart.
+
+# опишем обработчики этих комманд
+
+start() {
+
+	# запускаем nodejs приложение в качестве демона и сохраняем его pid в файл
+
+	start-stop-daemon --start --make-pidfile --background --pidfile /var/run/$NAME-server.pid \
+
+                --exec $NODE -- $DAEMON_SERVER $SERVER_PARAMS
+
+}
+
+stop() {
+
+	# останавливаем nodejs приложение
+
+	echo -n "Stopping $DESC: "
+
+    start-stop-daemon --stop --quiet --pidfile /var/run/$NAME-server.pid
+
+}
+
+case "$1" in
+
+	start)
+
+		start
+
+		;;
+
+	stop)
+
+		stop
+
+		;;
+
+	restart)
+
+		stop
+
+		sleep 1
+
+		start
+
+		;;
+
+	*)
+
+		echo "Usage: $NAME {start|stop|restart}" >&2
+
+		exit 1
+
+		;;
+
+esac
+
+exit 0
+  
+  service bugsarena start
+  
+  service bugsarena stop
+  
+  update-rc.d bugsarena defaults
+  
+  
+  
+  </script>
