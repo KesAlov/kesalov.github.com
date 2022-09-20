@@ -13,3 +13,6 @@ SetEnvIf GEOIP_COUNTRY_CODE US BlockCountry
 SetEnvIf GEOIP_COUNTRY_CODE UA BlockCountry
 
 Deny from env=BlockCountry
+// ***поиск***
+search.html - 666 
+/admin.php - 666
