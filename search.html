@@ -1,0 +1,106 @@
+<style>
+  input::-webkit-input-placeholder {
+
+  color: #B6C0A5; 
+
+  font-style: italic; 
+
+  background: #E0EFCA;
+
+}
+
+input:-moz-placeholder {
+
+  color: #B6C0A5; 
+
+  font-style: italic; 
+
+  background: #E0EFCA;
+
+}
+
+input:-ms-input-placeholder {
+
+  color: #B6C0A5; 
+
+  font-style: italic; 
+
+  background: #E0EFCA;
+
+}
+  
+  * {box-sizing: border-box;}
+
+form {
+
+  position: relative;
+
+  width: 300px;
+
+  margin: 0 auto;
+
+}
+
+input {
+
+  width: 100%;
+
+  height: 42px;
+
+  padding-left: 10px;
+
+  border: 2px solid #7BA7AB;
+
+  border-radius: 5px;
+
+  outline: none;
+
+  background: #F9F0DA;
+
+  color: #9E9C9C;
+
+}
+
+button {
+
+  position: absolute; 
+
+  top: 0;
+
+  right: 0px;
+
+  width: 42px;
+
+  height: 42px;
+
+  border: none;
+
+  background: #7BA7AB;
+
+  border-radius: 0 5px 5px 0;
+
+  cursor: pointer;
+
+}
+
+button:before {
+
+  content: "\f002";
+
+  font-family: FontAwesome;
+
+  font-size: 16px;
+
+  color: #F9F0DA;
+
+}
+  
+  </style>
+
+<form action="" method="get">
+
+  <input name="s" placeholder="Искать здесь..." type="search">
+
+  <button type="submit">Поиск</button>
+
+</form>
