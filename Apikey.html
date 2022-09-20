@@ -1,0 +1,121 @@
+<script>
+/**
+
+ * Function to produce UUID.
+
+ 
+
+ */
+
+function generateUUID()
+
+{
+
+	var d = new Date().getTime();	
+
+	if( window.performance && typeof window.performance.now === "function" )
+
+	{
+
+		d += performance.now();
+
+	}
+
+	
+
+	var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c)
+
+	{
+
+		var r = (d + Math.random()*16)%16 | 0;
+
+		d = Math.floor(d/16);
+
+		return (c=='x' ? r : (r&0x3|0x8)).toString(16);
+
+	});
+
+return uuid;
+
+}
+
+/**
+
+ * Generate new key and insert into input value
+
+ */
+
+$( '#keygen' ).on('click',function()
+
+{
+
+	$( '#apikey' ).val( generateUUID() );
+
+});
+</script>
+
+<style>
+  body {
+
+  text-align: center;
+
+  background: #f1f1f1;
+
+}
+
+.wrapper {
+
+  padding-top:60px;
+
+}
+
+button.form-control {
+
+  background: #f7f7f7 none repeat scroll 0 0;
+
+  border-color: #ccc;
+
+  box-shadow: 0 1px 0 #ccc;
+
+  color: #555;
+
+  vertical-align: top;
+
+  border-radius: 3px;
+
+  border-style: solid;
+
+  border-width: 1px;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  display: inline-block;
+
+  font-size: 13px;
+
+  height: 28px;
+
+  line-height: 26px;
+
+  margin: 0;
+
+  padding: 0 10px 1px;
+
+  text-decoration: none;
+</style>
+<html>
+  <div class="wrapper">
+
+  
+
+  <button class="form-control" id="keygen">генерировать api key</button>
+
+  
+
+  <input class="form-control" id="apikey" type="text" value="" placeholder="apikey"  />
+
+  
+
+</div> 
