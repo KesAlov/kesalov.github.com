@@ -1,6 +1,6 @@
 <html>
 
-<form id="form" class="mail.js" action="mail.js" method="post">
+<form id="form" class="mail.js" action="mail.js" method="POST">
 
 
 
@@ -8,9 +8,9 @@
 
 
 <p>Название</p>
-<input type="text" name="name" value="Название" id="name">
+<input type="text" name="name" value="Название" id="name" method="POST">
 <p>описание</p>
-<input type="text" name="Description" id="desc" value="описание">
+<input type="text" name="Description" id="desc" value="описание" method="POST">
 <select name="тип программы" id="type">
 
 
@@ -20,10 +20,10 @@
 </select>
 
 <p>Картинка</p>
-<input type="file" name="png" value="Картинка" id="fp">
+<input type="file" name="png" value="Картинка" id="fp" method="POST">
 <p>фаил(exe,iso,ipa,apk,app)</p>
-<input type="file" name="apk" value="приложение" id="apk" >
-<input type="submit" name="загрузить программу">
+<input type="file" name="apk" value="приложение" id="apk" method="POST">
+<input type="submit" name="загрузить программу" method="POST">
 </form>
 
 </html>
