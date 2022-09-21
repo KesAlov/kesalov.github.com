@@ -75,7 +75,39 @@
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
   </style>
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru"><script nonce="jlrrmTmSv3BvzQdboLlQ8Q">const imageUrl = ' _3\/2b7d6127c7224eef9420368f22a93854.jpg';
+
+      function bgImgLoaded() {
+
+        if (!globals.headerBgImgLoaded) {
+
+          globals.headerBgImgLoaded = new Date().getTime();
+
+        } else {
+
+          globals.headerBgImgLoaded();
+
+        }
+
+      }
+
+      if (imageUrl) {
+
+        const img = new Image();
+
+        img.src = imageUrl;
+
+        img.onload = bgImgLoaded;
+
+        globals.headerBgImgExists = true;
+
+      } else {
+
+        globals.headerBgImgExists = false;
+
+      }
+
+      </script>
   <head>
    <div class="dropdown">
 
