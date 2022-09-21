@@ -92,7 +92,39 @@
     </div>
    </div>
         
-   <img src="2b7d6127c7224eef9420368f22a93854.jpg" alt="Изображение"><p>ДОБРО пожаловать на сайт kesalov</p></img>
+   <script nonce="jlrrmTmSv3BvzQdboLlQ8Q">const imageUrl = ' _3\/2b7d6127c7224eef9420368f22a93854.jpg';
+
+      function bgImgLoaded() {
+
+        if (!globals.headerBgImgLoaded) {
+
+          globals.headerBgImgLoaded = new Date().getTime();
+
+        } else {
+
+          globals.headerBgImgLoaded();
+
+        }
+
+      }
+
+      if (imageUrl) {
+
+        const img = new Image();
+
+        img.src = imageUrl;
+
+        img.onload = bgImgLoaded;
+
+        globals.headerBgImgExists = true;
+
+      } else {
+
+        globals.headerBgImgExists = false;
+
+      }
+
+      </script> 
        
       
     </head>
