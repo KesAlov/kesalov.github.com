@@ -1,0 +1,37 @@
+//выбираем из базы все сообщения, запросом типа: select * from messages
+
+//выводим в цикле сообщения
+
+<div class="message_body">
+
+тело сообщения
+
+//выбираем из базы комментарии в соответствии с текущей новостью.
+
+//запрос типа select c.text as text, u.name as user_name from users u,comments c where c.msg_id = 'id сообщения' and u.id=c.user_id
+
+//выводим комментарии в цикле
+
+   <div class="comment_body">
+
+    текст и имя пользователя
+
+   </div>
+
+//здесь форма добавления нового комента, что то типа:
+
+<div class="comment_add">
+
+<form>
+
+<input type="hidden" value="id новости" name="msg_id">
+
+<textarea name="text"></textarea>
+
+<input type="submit" value="отправить">
+
+</form>
+
+</div>
+
+</div>
