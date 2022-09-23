@@ -29,7 +29,7 @@ h2 {
 
 }
 
-box {
+.box {
   borders: 20%;
   backround: orange;
   font-color: gray;
