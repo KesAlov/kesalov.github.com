@@ -12,3 +12,26 @@ h2 {
    background-image: url(https://github.com/KesAlov/kesalov.github.com/raw/main/2b7d6127c7224eef9420368f22a93854.jpg);
    color: white;
   } 
+
+.terminal {
+
+    animation: blink 0.5s ease-in-out infinite alternate;
+
+    display: inline-block;
+
+}
+
+@keyframes blink {
+
+    0% { color: transparent; }
+
+    50%, 100% { color: #dddd77; }
+
+}
+
+box {
+  borders: 20%;
+  backround: orange;
+  font-color: gray;
+ } 
+  
