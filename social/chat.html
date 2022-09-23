@@ -61,6 +61,9 @@ log(b.address() + " [ ты ]");
   var b = Bugout("bugout-chat-tutorial");
 
 b.on("seen", function(address) { log(address + " [ Кто-то ]"); });
+  var b = Bugout("bugout-chat-tutorial");
+
+b.on("seen", function(address) { log(address + " [ ещё кто-то ]"); });
   
   b.on("message", function(address, message) {
 
