@@ -56,11 +56,11 @@
   
   var b = Bugout();
 
-log(b.address() + " [ me ]");
+log(b.address() + " [ ты ]");
 
   var b = Bugout("bugout-chat-tutorial");
 
-b.on("seen", function(address) { log(address + " [ seen ]"); });
+b.on("seen", function(address) { log(address + " [ Кто-то ]"); });
   
   b.on("message", function(address, message) {
 
