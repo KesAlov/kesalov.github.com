@@ -6,7 +6,61 @@
 
 <title>Rich Text Editor</title>
 
-<script type="text/javascript"></script>
+<script type="text/javascript">.content { display: none; }
+
+.content::after {
+
+  display: block; content: ' ( 'url(href="sample.php")' ) ';
+
+}
+
+form {
+
+  display: inline-block;
+
+  background-color: rgba(180,180,180,.8);
+
+  border: 1px solid rgba(155,155,155,.6);
+
+}
+
+.intLink { cursor: pointer; }
+
+img.intLink { border: 0; }
+
+#toolBar1 select { font-size:10px; background-color: #eff;}
+
+#textBox {
+
+  min-width: 500px;
+
+  height: 300px;
+
+  border: 1px solid rgba(155,155,155,.6);
+
+  padding: 12px;
+
+  overflow: scroll;
+
+  background-color: #eff;
+
+}
+
+#textBox #sourceText {
+
+  padding: 0;
+
+  margin: 0;
+
+  max-width: 800px;
+
+  min-height: 200px;
+
+}
+
+#switchBox, label, #btn { cursor: pointer; }
+
+</script>
 
 <style type="text/css"></style>
 
