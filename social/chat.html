@@ -1,93 +1,176 @@
+<script>
+HTML CSS JSResult Skip Results Iframe
 
+EDIT ON
+
+var timer = new Date();
+
+function web_send_msg()
+
+{
+
+    // Getting values from input elements.
+
+    var text = $("#WebChatTextID").val();
+
+    var name = $("#WebChatNameID").val();
 
  
 
-<!DOCTYPE html>
+    // Form cleaning
 
-<html lang="ru">
+    $("#WebChatTextID").val("");  
 
-<head>
+ 
 
-    <meta charset="UTF-8">
+    // We will write the time at the time of sending the message
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    timer = new Date();
 
-    <meta http-equiv="X-RU-Compatible" content="ie=edge">
+ 
 
-    <title>чат</title>
+    // Adding a sent message to the list of messages.
 
-<link rel="stylesheet"  href="/social/profile.css">
+    //$("#WebChatFormForm").append("<p><b>"+HtmlEncode(name)+": </b>"+HtmlEncode(text)+"</p>");
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+ 
 
-</head>
+    // Sending a message to the chat channel
 
-<body>
+    CometServer().web_pipe_send("web_chat_pipe", {"text":text, "name":name});
 
-    <div class="container">
+ 
 
-        <div class="row">
+    // Notify the other tabs that we added a message to the chat
 
-            <div class="col-lg-12">
+    comet_server_signal().send_emit("AddToChat", {"text":text, "name":name})
 
-                <h2 class="text-center">
+}
 
-                    Чат
+ 
 
-                </h2>
+ 
 
-            </div>
+// The function will be executed in after the page loads.
 
-            <div class="col-lg-6">
+$(document).ready(function()
 
-                <div id="comment-field"></div>
+{
 
-            </div>
+    // Create a chat form. Layout.
 
-            <div class="col-lg-6">
+    var html =  "<div style=\"border: 1px solid #ccc;padding:10px;\" >"
 
-                    <form>
+            + "<div id=\"WebChatFormForm\" ></div>"
 
-                            <div class="form-group">
+      + "<input type=\"text\" id=\"WebChatNameID\" placeholder=\"Enter your name...\" > <div id=\"answer_div\" style=\"float:right;\" ></div>"
 
-                              <label for="comment-name">имя:</label>
+            + "<textarea id = \"WebChatTextID\" placeholder = \"Send an online chat...\" ></textarea>"
 
-                              <input type="email" class="form-control" id="comment-name"  placeholder="эмэил">
+ 
 
-                            </div>
+                  + "<div style=\"margin-bottom: 0px;margin-top: 10px;\">"
 
-                            <div class="form-group">
+                  +    "<input type=\"button\" style=\"width: 220px;\" onclick=\"web_send_msg();\" value=\"Send\" >"
 
-                              <label for="comment-body">сообщение:</label>
+                  +    " <div id=\"answer_error\"  style=\"float:right;\" ></div>"
 
-                              <textarea type="password" class="form-control" id="comment-body" placeholder="comment"></textarea>
+                  + "</div>"
 
-                            </div>
+             +  "</div>";
 
-                            <div class="form-group form-check text-right">
+    $("#web_chat_holder").html(html);
 
-                                    <button type="submit" id="comment-add" class="btn btn-primary">отправить</button>
+ 
 
-                            </div>
+    // Subscribe to the channel in which chat messages will be sent.
 
-                          </form>
+    CometServer().subscription("web_chat_pipe", function(msg){
 
-            </div>
+        console.log(["msg", msg]);
 
-        </div>
+      
 
-    </div>
+        // dding a received message to the list of messages.
 
-  
+        $("#WebChatFormForm").append("<p><b>"+HtmlEncode(msg.data.name)+": </b>"+HtmlEncode(msg.data.text)+"</p>");
 
-    
+    });
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    // We subscribe to the event of adding a message to the chat by us, so that if the chat is open in several tabs
 
-    <script src="js.js"></script>
+    // our message added on one tab was displayed on all the others without reloading the page
 
-</body>
+    comet_server_signal().connect("AddToChat", function(msg){
 
-</html>
+        console.log(["msg", msg]);
+
+        // Adding a received message to the list of messages.
+
+        $("#WebChatFormForm").append("<p><b>"+HtmlEncode(msg.name)+": </b>"+HtmlEncode(msg.text)+"</p>");
+
+    });
+
+ 
+
+    // We subscribe to the channel in which the delivery notifications of the sent messages will be sent.
+
+    CometServer().subscription("#web_chat_pipe", function(p)
+
+    {
+
+        // We will write the time at the time of receipt of the delivery report
+
+        var etime = new Date();
+
+ 
+
+        console.log(["answer_to_web_chat_pipe", p]);
+
+        $("#answer_div").html("Message delivered "+p.data.number_messages+" recipients for "+ (etime.getTime() - timer.getTime() )+"ms");
+
+        
+
+    });
+
+ 
+
+   // Download message history
+
+   // CometServer().get_pipe_log("web_chat_pipe");
+
+});
+
+ 
+
+ 
+
+function HtmlEncode(s)
+
+{
+
+  var el = document.createElement("div");
+
+  el.innerText = el.textContent = s;
+
+  s = el.innerHTML;
+
+  return s;
+
+}
+
+CometServer().start({dev_id:15})
+ 
+ </script>
+
+
+
+<div id="web_chat_holder"></div>
+
+ 
+
+
+
+            
