@@ -29,8 +29,8 @@ h2 {
 
 }
 
- .box {
-  borders: 2px;
+ span.box {
+  borders: 20px;
   backround-color: orange;
   color: gray;
   backround-image: none;
