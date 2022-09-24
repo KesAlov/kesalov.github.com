@@ -68,6 +68,28 @@
 
                     <!-- Содержимое 1 страницы -->
 
+                <header>
+
+        <h1>Заголовок страницы</h1>
+
+        <figure>
+
+            <img src="http://example.com/img.jpg"/>
+
+        </figure>
+
+        <h2>Заголовок второго уровня</h2>
+
+        <menu>
+
+            <a href="http://example.com/page1.html">Текст ссылки</a>
+
+            <a href="http://example.com/page2.html">Текст ссылки</a>
+
+        </menu>
+
+    </header>
+
                 ]]>
 
             </turbo:content>
