@@ -1,7 +1,157 @@
 
 
+<!doctype html>
+
+<html lang="ru">
+
+	<head>		<!-- Required meta tags -->
+
+		<title>Generate API Key Demo - CodeHasBug</title>
+
+		<meta name="description" content="api key generator" />
+
+		
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		
+
+		<!-- Bootstrap CSS -->
+
+		
+
+		
+
+		
+
+		
+
+		
+
+		 
+
+		
+			
+
+		
+
+		
+
+	</head>
+
+	<body>
+
+		
+
+		<div class="container">
+
+			
+
+			<div class="row">
+
+				<div class="col-12 mt-5 text-center">
+
+					<h1>Api Key Generator</h1>
+
+				</div>
+
+			</div>
+
+			
+
+			<div class="row justify-content-center mt-3">
+
+				<div class="col-8">
+
+					<input type="text" id="api" class="form-control text-center read-only" placeholder="Generate New API key">
+
+				</div>
+
+			</div>
+
+			
+
+			<div class="row justify-content-center mt-3">
+
+				<div class="col-6">
+
+					<button id="genApi" class="btn btn-danger btn-block"> генерировать api key
+                                        </button>
+
+				</div>
+
+				
+
+					
+
+				
+
+			</div>
+
+			
+
+			
+
+			<div class="spacer"></div>
+
+		</div>
+
+		
+
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+		<script>
+
+			$(document).ready(function(){
+
+				
+
+				$("#genApi").click( function(){
+
+					var d = new Date().getTime();
+
+					
+
+					if( window.performance && typeof window.performance.now === "function" ){
+
+						d += performance.now();
+
+					}
+
+				
+
+					var api= 'xxxxxxxx-xxxx-6xxx-yxxx-xxxxxx5xxxxx'.replace(/[xy]/g, function(c){
+
+						
+
+						var r = (d + Math.random()*16)%16 | 0;
+
+						d = Math.floor(d/16);
+
+						return (c=='x' ? r : (r&0x3|0x8)).toString(16);
+
+					});
+
+					
+
+					$("#api").val(api);
+
+				});
+
+				
+
+			});
+
+		</script>
+
+	</body>
+
+</html>
 
 
-<keygen name="name" challenge="challenge string" keytype="type"
 
-        keyparams="pqg-params">
+
