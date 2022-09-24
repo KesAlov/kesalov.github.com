@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <script>
+
+   function onSubmit(token) {
+
+     document.getElementById("demo-form").submit();
+
+   }
+
+ </script>
     <link rel="stylesheet" href="/social/profile.css">
     <title>социальная сеть</title>
     <h1>ДОБРО пожаловать в KAsocial</h1>
@@ -22,7 +31,13 @@
      <form id="subtoposts" action="formspree.io/keosvstavros0@gmail.com" method="post">
        <h2>подпишись чтобы не пропускать новые посты, вопросы и статьи</h2>
        <input type="email" id="email"value="електронная почта">
-       <button type="submit">подписаться</button>
+       <button type="submit" class="g-recaptcha" 
+
+        data-sitekey="reCAPTCHA_site_key" 
+
+        data-callback='onSubmit' 
+
+        data-action='submit'>подписаться</button>
        </form>
        
      </body>
