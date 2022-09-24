@@ -84,11 +84,30 @@ box {<br>
    </code>
    </pre>
     <h2>конец статьи</h2>
-    <h2><button type="button" onclick="printJS({printable:'/social/posts/howcreated.html', type:'html', showModal:true})">
+    <h2><a href="#" class="action-print">Распечатать</a>
+
+ 
+
+<script>
+
+$(function($){
+
+	$(".action-print").click(function(){
+
+		window.print();
+
+		return false;
+
+	});
+
+});
+
+</script> 
+      </h2>
 
     
 
- распечатать</button></h2>
+ 
     <h2><a href="/social/posts/howcreated.html" download="">скачать</a></h2>
    </body>
   </html>
