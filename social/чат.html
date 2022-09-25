@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <!-- Подключаем библиотеки -->
+
+    <script src="//comet-server.ru/CometServerApi.js" type="text/javascript"></script>
+
+    <script src="//comet-server.ru/doc/CometQL/simplePhpChat/jquery.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<!-- Блок в который мы добавим полученное сообщение -->
+
+<div id="textHolder" style="margin-top:10px; border:1px solid #000;padding:10px;"></div>
+
+<hr>
+
+<input type="text" id="msgText" placeholder="Текст сообщения"><input type="button" value="Отправить"  onclick="sendMsg();">
+
+Для связи с комет сервером используется <a href="http://comet-server.ru/wiki/doku.php/comet:cometql">CometQL</a>. CometQL - это api для работы с комет сервером по протоколу MySQL.
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    /** 
+
+     * Подписываемся на получение сообщения из канала SimplePhpChat
+
+     */
+
+    CometServer().subscription("SimplePhpChat", function(event){
+
+        console.log("Мы получили сообщение из канала SimplePhpChat",  event.data, event);
+
+        $("#textHolder").html( $("#textHolder").html() +"<hr>"+event.data);
+
+    })
+
+    /** 
+
+     * Подключение к комет серверу. Для возможности принимать команды.
+
+     * dev_id ваш публичный идентифиукатор разработчика
+
+     */
+
+    CometServer().start({dev_id:15 })
+
+})
+
+function sendMsg(){
+
+	var text = $("#msgText").val();	
+
+    jQuery.ajax({
+
+        url: "//comet-server.ru/doc/CometQL/simplePhpChat/sendMsgToChat.php",
+
+        type: "GET",
+
+        data:"text="+encodeURIComponent(text),
+
+        success: function(){
+
+            $("#msgText").val('');
+
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+
+</html>
