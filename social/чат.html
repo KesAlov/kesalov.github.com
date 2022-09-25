@@ -13,6 +13,7 @@ $link = mysqli_connect("app.comet-server.ru", "15", "lPXBFPqNg3f661JcegBY0N0dPXq
 // Отправляем сообщение в канал
 
 mysqli_query (  $link, "INSERT INTO pipes_messages (name, event, message)VALUES('SimplePhpChat', '', '".mysqli_real_escape_string($link,htmlspecialchars($_GET['text']))."' );" );
+?>
 <!DOCTYPE HTML>
 
 <html>
