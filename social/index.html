@@ -1,3 +1,24 @@
+<?php
+HTTP/1.0 200 OK
+
+Content-type: text/html
+
+Set-Cookie: yummy_cookie=choco
+
+Set-Cookie: tasty_cookie=strawberry
+
+GET /sample_page.html HTTP/1.1
+
+Host: www.example.org
+
+Cookie: yummy_cookie=choco; tasty_cookie=strawberry
+
+Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
   <head>
