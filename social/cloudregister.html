@@ -1,5 +1,5 @@
 
-
+<link rel="stylesheet" href="/social/profile.css">
 
 
  <script>
@@ -45,12 +45,13 @@ function checkCookie()
 {
 
 var user=getCookie("username");
+var user=getCookie("email");
 
 if (user!="")
 
   {
 
-  window.location.href ="http://stackoverflow.com/questions/20766590/how-to-save-user-text-input-html-input-as-cookie" 
+  window.location.href ="https://kesalov.github.io/social/newprofile.html" 
 
   }
 
@@ -73,8 +74,14 @@ else
 </script>
 
 <input type="text" id="userInput"=></input>
+<input type="text" id="emailInput"=></input>
 
-    <button onclick="test()">Submit</button>
+    <button onclick="test()">Создать аккакнт</button>
+<h1>Плюсы и минусыофлаин регистрации</h1>
+<h2>+ваши данные будут сохранены в браузер</h2>
+<h2>+к вашему аккаунту небудет доступа</h2>
+<h2>-чтобы удалить аккаунт надо очистить кеш браузера</h2>
+<h2>-вам нужно будет регистрировать профиль отдельно</h2>
 
 <script>
 
