@@ -1,0 +1,15 @@
+Неверно:
+
+User-agent: Yandex
+
+Disallow: /корзина
+
+Sitemap: сайт.рф/sitemap.xml
+
+#Верно:
+
+User-agent: Yandex
+
+Disallow: kesalov.github.io
+
+Sitemap: https://kesalov.github.io/
