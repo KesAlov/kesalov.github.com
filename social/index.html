@@ -129,8 +129,8 @@ else
 
 // -->
  
- function singout() {} 
- document.write ("<a href=\"javascript:delete_cookie('username'); document.location.reload( );\">Забудь обо мне!</a>") 
+ function singout( name, value, expires_year, expires_month, expires_day, path, domain, secure ) {} 
+ document.write ("<a href=\"javascript:delete_cookie('username'); document.location.reload( );\">Выйти</a>") 
 
 </SCRIPT>
 <!DOCTYPE html>
@@ -186,6 +186,6 @@ else
       </span> 
      </body>
    <h2>KesAlov corporation ©2021-2022 Россия </h2><br>
-    <a href=\"javascript:delete_cookie('username'); document.location.reload( );\">Выйти</a><br>
+    <div class="singout"> </div>
      </html>
     
