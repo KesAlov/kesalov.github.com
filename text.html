@@ -68,11 +68,13 @@ img.intLink { border: 0; }
 
 <body onload="initDoc();">
 
-<form name="compForm" method="post" action="sample.php" onsubmit="if(validateMode()){this.myDoc.value=oDoc.innerHTML;return true;}return false;">
+<form name="compForm" method="post" action="act.html" target="_blank" onsubmit="if(validateMode()){this.myDoc.value=oDoc.innerHTML;return true;}return false;">
 
 <input type="hidden" name="myDoc">
 
 <div id="toolBar1">
+  
+
 
 <select onchange="formatDoc('formatblock',this[this.selectedIndex].value);this.selectedIndex=0;">
 
@@ -202,7 +204,7 @@ img.intLink { border: 0; }
 
 </div>
 
-<div id="textBox" contenteditable="true"><p>Однажды в студёную, зимнюю пору...</p></div>
+<div name="text" id="textBox" contenteditable="true"><p>Однажды в студёную, зимнюю пору...</p></div>
 
 <span><input id="btn" type="submit" value="Принять" /></span>
 
