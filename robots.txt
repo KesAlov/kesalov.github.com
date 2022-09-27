@@ -1,14 +1,14 @@
 Неверно:
 
-User-agent: Yandex
+User-agent: Kesalov
 
 Disallow: /корзина
 
-Sitemap: сайт.рф/sitemap.xml
+Sitemap: kesalov.github.io
 
 #Верно:
 
-User-agent: Yandex
+User-agent: Kesalov
 
 Disallow: kesalov.github.io
 
