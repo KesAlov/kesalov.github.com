@@ -120,7 +120,7 @@ else
 
   var username = get_cookie ( "username" );
 
-  document.write ( "Привет, " + username + ", добро пожаловать в KAsocial" );
+  document.write ( "<h1>Привет</h1>, " + username + ", <h1>добро пожаловать в KAsocial</h1>" );
 
   
 }
@@ -130,7 +130,7 @@ else
 // -->
  
  function singout( name, value, expires_year, expires_month, expires_day, path, domain, secure ) {} 
- document.write ("<a href=\"javascript:delete_cookie('username'); document.location.reload( );\">Выйти</a>") 
+ document.close ("<a href=\"javascript:delete_cookie('username'); document.location.reload( );\">Выйти</a>") 
 
 </SCRIPT>
 <!DOCTYPE html>
