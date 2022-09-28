@@ -45,6 +45,8 @@ function checkCookie()
 {
 
 var user=getCookie("username");
+var user=getCookie("email")
+
 
 
 if (user!="")
@@ -92,11 +94,13 @@ else
 
             setCookie("username",userInput,30);
 
+            var emailInput = document.getElementById("emailInput")
+            
+            setCookie("email", emailInput,30);
+         
             checkCookie();
          
-            var url = URL.createObjectURL(input.files[0]);
-
-            image.src = url;
+            
 
         }
 
