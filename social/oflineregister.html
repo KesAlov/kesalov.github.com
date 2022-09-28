@@ -76,6 +76,8 @@ else
 
 <input type="text" Placeholder="name" id="userInput"=>имя</input>
 <input type="email" Placeholder="email" id="emailInput"=>email(не обязательно)</input>
+<input type="file" Placeholder="Изображение" id="FileInput">
+<img src="" alt="Изображение профиля" id="image" name="image">
 
     <button onclick="test()">Создать аккакнт</button>
 <tag><input type="checkbox">я согласен что аккаунт будет сохранён на моём устройстве и KesAlov corporation не будет иметь к нему доступ</tag>
@@ -91,8 +93,19 @@ else
             setCookie("username",userInput,30);
 
             checkCookie();
+         
+            var url = URL.createObjectURL(input.files[0]);
+
+            image.src = url;
 
         }
 
 </script>
+<script>
+ var url = URL.createObjectURL(input.files[0]);
+
+    image.src = url; 
+ 
+ 
+ </script>
 
