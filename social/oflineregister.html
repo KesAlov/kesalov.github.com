@@ -45,7 +45,7 @@ function checkCookie()
 {
 
 var user=getCookie("username");
-var user=getCookie("email")
+var email=getCookie("email")
 
 
 
@@ -95,7 +95,7 @@ else
 
             setCookie("username",userInput,30);
 
-            var emailInput = document.getElementById("emailInput")
+            var emailInput = document.getElementById("emailInput").value;
             
             setCookie("email", emailInput,30);
          
