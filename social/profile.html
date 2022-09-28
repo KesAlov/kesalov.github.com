@@ -1,20 +1,7 @@
 <SCRIPT language="JavaScript">
  
- function preview_image(event) {
 
-    var reader = new FileReader();
 
-    reader.onload = function(){
-
-        var output = document.getElementById('output_image');
-
-        output.src = reader.resu<
-
-    }
-
-    reader.readAsDataURL(event.target.files[0]);
-
-}
  
 
 <!--
@@ -158,8 +145,10 @@ else
 
 </SCRIPT>
 
-<img src="guest.png" id="output_image">
-
+<html>
+ <link rel="stylesheet" href="social/profile.css" >
+ 
 
 <div class="get_cookie"> </div>
 <div class="singout"> </div>
+</html>
