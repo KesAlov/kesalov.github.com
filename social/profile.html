@@ -136,8 +136,10 @@ else
 {
 
   var username = get_cookie ( "username" );
+  var email = get_cookie ( "email" ) 
 
-  document.write ( username );
+  document.write ( username "<br>");
+  document.write ( email "<br>");
 
   
 
@@ -158,5 +160,6 @@ else
 
 <img src="guest.png" id="output_image">
 
-<input type="file"accept="image/*"onchange="preview_image(event)" id="file">
+
 <div class="get_cookie"> </div>
+<div class="singout"> </div>
