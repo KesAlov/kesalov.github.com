@@ -1,3 +1,79 @@
+<style>
+    #cookie_notification{
+
+  display: none;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  position: fixed;
+
+  bottom: 15px;
+
+  left: 50%;
+
+  width: 900px;
+
+  max-width: 90%;
+
+  transform: translateX(-50%);
+
+  padding: 25px;
+
+  background-color: white;
+
+  border-radius: 4px;
+
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+#cookie_notification p{
+
+  margin: 0;
+
+  font-size: 0.7rem;
+
+  text-align: left;
+
+  color: $color_text;
+
+}
+
+@media (min-width: 576px){
+
+  #cookie_notification.show{
+
+    display: flex;
+
+  }
+
+  .cookie_accept{
+
+    margin: 0 0 0 25px;
+
+  }
+
+}
+
+@media (max-width: 575px){
+
+  #cookie_notification.show{
+
+    display: block;
+
+    text-align: left;
+
+  }
+
+  .cookie_accept{
+
+    margin: 10px 0 0 0;
+
+  }
+
+ </style>
 <script>
 function checkCookies(){
 
@@ -7,7 +83,7 @@ function checkCookies(){
 
     let cookieBtn = cookieNotification.querySelector('.cookie_accept');
 
-    // Если записи про кукисы нет или она просрочена на 1 год, то показываем информацию про кукисы
+    
 
     if( !cookieDate || (+cookieDate + 31536000000) < Date.now() ){
 
