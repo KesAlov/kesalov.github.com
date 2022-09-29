@@ -1,3 +1,6 @@
+<script>
+ document.addEventListener('DOMContentLoaded',function(){let cookiePopup=document.getElementById('js-cookie');let cookie=document.cookie.split(';');let cookieAccepted=cookie.filter((item)=> item.includes('cookieAccepted=true')).length;if (!cookieAccepted){setTimeout(function (){const adx=document.querySelector('#bottomStick');if (adx){cookiePopup.style.bottom=130 + 'px';}cookiePopup.classList.add('js-cookie--showed');},7000);}document.getElementById('js-accept-cookie').addEventListener('click',function(){document.cookie="cookieAccepted=true;path=/;max-age=2592000";document.getElementById('js-cookie').classList.remove('js-cookie--showed');});});
+</script>
 <SCRIPT language="JavaScript">
 
 <!--
@@ -158,12 +161,14 @@ else
 
             </div> 
   <h2>ещё нет аккаунта? Так <a href="oflineregister.html">зарегистрируйся</a></h2><br>
-    <div class="okno">
+    
+<p class="cookie__message">Этот сайт использует 🍪куки для регистрации и т.д.</p>
 
-      Мы используем фаилы куки для быстрой загрузки сайта<br>
+    <button id="js-accept-cookie" class="cookie__btn">Accept</button>
+
       
 
-    </div>
+    
     <br>
     У нас есть<br>
     <ul>
