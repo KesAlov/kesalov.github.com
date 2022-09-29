@@ -115,4 +115,12 @@ h2 {
         cursor:pointer;
 
       }
-  
+
+
+  button {
+    
+    backround-color: red;
+    
+    borders: none;
+    
+   } 
