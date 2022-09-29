@@ -1,0 +1,62 @@
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/init.combined.js"></script>
+
+<script type="text/javascript" src="http://d3g0gp89917ko0.cloudfront.net/v--3e3a6f7dbcc9/common--javascript/WIKIDOT.combined.js"></script>
+
+<script>
+
+async function run(){
+
+   var text1 = document.getElementById("text1");
+
+   var chars = "01101101";
+
+   var replace;
+
+   var inter = 10;
+
+   /* the "inter" number controls how much the message blends in with the rest of the text. Higher number means more visible, decimals should work */
+
+   var phrase1;
+
+   var remainder;
+
+   while (1) {
+
+      phrase1 = "101010101010101010010101101000011101101010101010101010101010101010110110110000000010100001000000000101011010101110101010101010101010101010ШИ6КА";
+
+      replace = "";
+
+      for (var i = 0; i < phrase1.length; i++) {
+
+         var rand = Math.floor(Math.random() * inter)
+
+         if (rand == 0 || phrase1[i] == " ") {
+
+            var n = Math.floor(Math.random() * chars.length);
+
+            replace = replace + chars[n]
+
+         } else {
+
+            replace = replace + phrase1[i]
+
+         }
+
+      }
+
+      text1.innerHTML = replace
+
+      await new Promise(r => setTimeout(r, 75));
+
+      }   
+
+   }
+
+ 
+
+run()
+
+</script>
+
+<p><tt id="text1"></tt></p>
+
