@@ -1,5 +1,33 @@
 <script>
- document.addEventListener('DOMContentLoaded',function(){let cookiePopup=document.getElementById('js-cookie');let cookie=document.cookie.split(';');let cookieAccepted=cookie.filter((item)=> item.includes('cookieAccepted=true')).length;if (!cookieAccepted){setTimeout(function (){const adx=document.querySelector('#bottomStick');if (adx){cookiePopup.style.bottom=130 + 'px';}cookiePopup.classList.add('js-cookie--showed');},7000);}document.getElementById('js-accept-cookie').addEventListener('click',function(){document.cookie="cookieAccepted=true;path=/;max-age=2592000";document.getElementById('js-cookie').classList.remove('js-cookie--showed');});});
+function checkCookies(){
+
+    let cookieDate = localStorage.getItem('cookieDate');
+
+    let cookieNotification = document.getElementById('cookie_notification');
+
+    let cookieBtn = cookieNotification.querySelector('.cookie_accept');
+
+    // Если записи про кукисы нет или она просрочена на 1 год, то показываем информацию про кукисы
+
+    if( !cookieDate || (+cookieDate + 31536000000) < Date.now() ){
+
+        cookieNotification.classList.add('show');
+
+    }
+
+    // При клике на кнопку, в локальное хранилище записывается текущая дата в системе UNIX
+
+    cookieBtn.addEventListener('click', function(){
+
+        localStorage.setItem( 'cookieDate', Date.now() );
+
+        cookieNotification.classList.remove('show');
+
+    })
+
+}
+
+checkCookies(); 
 </script>
 <SCRIPT language="JavaScript">
 
@@ -161,10 +189,15 @@ else
 
             </div> 
   <h2>ещё нет аккаунта? Так <a href="oflineregister.html">зарегистрируйся</a></h2><br>
-    
-<p class="cookie__message">Этот сайт использует 🍪куки для регистрации и т.д.</p>
+ 
+ <div id="cookie_notification">
 
-    <button id="js-accept-cookie" class="cookie__btn">Accept</button>
+        <p>Мы используем куки для входа и т.д, если вы отключите куки в настройках браузера то вы не сможете войти в аккаунт и он будет удалён.</p>
+
+        <button class="button cookie_accept">Принять</button>
+
+</div>
+    
 
       
 
