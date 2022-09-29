@@ -1,0 +1,99 @@
+<script src="//comet-server.com/js/lib/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+
+<script src="//comet-server.com/js/lib/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="//comet-server.com/js/lib/notify.js"></script>
+
+<script src="//comet-server.com/js/lib/moment.min.js"></script>
+
+<script src="//comet-server.com/js/common.js"></script>
+
+<script src="//comet-server.com/js/lib/bootstrap-datetimepicker.js"></script>
+
+<!-- Подключаем библиотеки -->
+
+<script src="https://comet-server.com/CometServerApi.js" type="text/javascript"></script>
+
+<script src="//comet-server.com/include/StarCometChat/js/jquery.cookie.js"></script>
+
+<script src="//comet-server.com/include/StarCometChat/js/moment.min.js"></script>
+
+<script src="//comet-server.com/include/StarCometChat/tinyscrollbar/jquery.tinyscrollbar.js"></script>
+
+<script src="//comet-server.com/include/StarCometChat/chat.js"></script>
+
+<script src="//comet-server.com/js/moderator.js"></script>
+
+ 
+
+<script src="//comet-server.com/js/lib/prism/prism.js"></script>  
+
+<!-- Latest compiled and minified CSS -->
+
+<link rel="stylesheet" href="//comet-server.com/css/lib/bootstrap.min.css" > 
+
+  
+
+<!-- Optional theme -->
+
+<link rel="stylesheet" href="//comet-server.com/css/lib/bootstrap-theme.min.css" crossorigin="anonymous">
+
+<link href="//comet-server.com/include/StarCometChat/chat.css" rel="stylesheet">
+
+<link href="//comet-server.com/css/lib/bootstrap-datetimepicker.css" rel="stylesheet">
+
+ 
+
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'RU-56834371-1', 'auto');
+
+  ga('send', 'pageview');
+
+</script>
+<div id="web_chat_holder" style="text-align: left; display: inline-block; float: left;  margin-bottom:20px;background-color: #fff;box-shadow: 0 0 10px 0px;">
+
+                                <div class="WebChatHolder">
+
+                                    <div id="WebChatFormForm" style="overflow: auto;height: 140px;">
+
+                                        <h4>Попробуйте отправить сообщение</h4>
+
+                                        <p style="font-size: 14px;">
+
+                                            Для проверки можете зайти одновременно из двух разных браузеров на эту страницу и отправить сообщение. Если в этот момент на сайте будет ещё кто то кроме вас он тоже увидит ваши послания.
+
+                                        </p>
+
+                                    </div>
+
+                                    <input type="text" id="WebChatNameID" style="margin-top:10px;" class="form-control"  placeholder="Enter your name...">
+
+                                    <textarea id="WebChatTextID"   placeholder="Send a message to online chat..."
+
+                                              style="max-width: 100%;  max-height: 100px; width: 100%; margin-top: 10px; display: block; margin-bottom: 0px; height: 44px;"></textarea>
+
+                                    <div style="margin-bottom: 0px;margin-top: 10px;">
+
+                                        <button type="button" class="btn btn-default" onclick="web_send_msg();">Send</button>
+
+                                        <div id="answer_div" style="float:right;"  ></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
