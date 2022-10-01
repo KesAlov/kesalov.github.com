@@ -226,8 +226,12 @@ else
 {
 
   var username = get_cookie ( "username" );
+  
+  var email = get_cookie ( "email" );
 
   document.write ( "Привет, " + username + ", добро пожаловать в KAsocial" );
+    
+  document.querySelector("email").value = ( email ) ;
 
   
 }
