@@ -405,7 +405,7 @@ infobox {
 border: 2px solid #0cf;
 border-color: blue;
 display: block;
-
+color: #0cf;
 
 } 
 
@@ -413,6 +413,7 @@ dontbox {
 border: 2px solid red;
 border-color: red;
 display: block;
+color: red;
 
 } 
 
@@ -420,4 +421,5 @@ warningbox {
 border: 2px solid yellow;
 border-color: yellow;
 display: block;
+color: yellow;
 } 
