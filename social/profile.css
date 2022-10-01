@@ -122,7 +122,13 @@ box {
     
     background-color: #4CAF50; /* Green */
 
-    border: 2px solid black;
+    border: 2px solid #000;
+    border-color: #000000;
+	  
+	 
+	  
+	  
+	  
 
     color: white;
 
