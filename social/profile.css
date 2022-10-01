@@ -29,7 +29,8 @@ h2 {
 
 }
 
- .box {
+ 
+box {
   
   display: block;
 
@@ -398,3 +399,24 @@ h2 {
   }
 
 }
+
+infobox {
+	
+border: 2px;
+border-color: blue;
+display: block;
+
+
+} 
+
+dontbox {
+border: 2px;
+border-color: red;
+display: block;
+
+} 
+
+warningbox {
+border: 2px;
+border-color: yellow;
+display: block;
