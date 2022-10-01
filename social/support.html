@@ -9,11 +9,17 @@
   <body>
     <box>
     <form action="https://formspree.io/f/xoqbddoj" id="supportform" method="POST">
-      <textarea name="text">напишите сдесь что-то</textarea><br>
-      <input type="check" name="error">ошибка<br>
-      <input type="check" name="new">добавление<br>
-      <input type="check" name="review">отзыв<br>
-      <input type="check" name="other">другое</br>
+      <textarea name="text" width="250" height="250" >напишите сдесь что-то</textarea><br>
+      <input type="radio" name="error">ошибка<br>
+      <input type="radio" name="new">добавление<br>
+      <input type="radio" name="review">отзыв<br>
+      <input type="radio" name="other">другое</br>
+      <select name="browser">
+        <option name="KAbrowser">Браузер КесАлов</option>
+        <option name="yandex">Яндекс браузер</option>
+        <option name="opega">опега</option>
+        <option name="google">гугл или кром</option>
+      </select>
       <input type="email" name="email" value="email">
       <button type="submit">отправить</button><br>
     </form>
