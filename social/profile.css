@@ -143,6 +143,40 @@ box {
     font-size: 15px;
     
    } 
+
+Button.submit {
+
+    
+
+    background-color: red; /* Green */
+
+    border: 2px solid #000;
+
+    border-color: black;
+
+	  	 
+
+	  
+
+	  
+
+	  
+
+    color: white;
+
+    padding: 15px 32px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    font-size: 15px;
+
+    
+
+   } 
    
    
 
