@@ -188,6 +188,8 @@ function get_cookie ( cookie_name )
     return null;
 
 }
+    
+
 
  
 
@@ -197,7 +199,7 @@ if ( ! get_cookie ( "username" ) )
 
   var username = prompt ( "Пожалуйста, ведите Ваше имя", "" );
     
-  document.write ("<h2>ещё нет аккаунта? Так <a href=/"oflineregister.html/">зарегистрируйся</a></h2><br>");
+  
     
   
  
@@ -220,6 +222,8 @@ if ( ! get_cookie ( "username" ) )
     set_cookie ( "username", username, cookie_year, cookie_month, cookie_day );
 
     document.location.reload( );
+      
+    document.write ("<h2>ещё нет аккаунта? Так <a href=/"oflineregister.html/">зарегистрируйся</a></h2><br>");
 
   }
 
