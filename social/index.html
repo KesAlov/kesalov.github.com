@@ -197,7 +197,7 @@ if ( ! get_cookie ( "username" ) )
 
   var username = prompt ( "Пожалуйста, ведите Ваше имя", "" );
     
-  document.write (<h2>ещё нет аккаунта? Так <a href=/"oflineregister.html/">зарегистрируйся</a></h2><br>);
+  document.write ("<h2>ещё нет аккаунта? Так <a href=/"oflineregister.html/">зарегистрируйся</a></h2><br>");
     
   
  
@@ -245,6 +245,7 @@ else
 // -->
  
  function singout( name, value, expires_year, expires_month, expires_day, path, domain, secure ) {} 
+ 
  document.write ("<a href=\"javascript:delete_cookie('username'); document.location.reload( );\"> Выйти</a><br>") 
 
 </SCRIPT>
