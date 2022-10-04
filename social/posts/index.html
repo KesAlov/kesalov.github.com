@@ -6,98 +6,44 @@
     
     
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+		$(
+
+			function(){
+
+				// Find all comments within the given collection.
+
+				var jComments = $( "#template" ).comments();
+
+				// Add the template text to list.
+
+				$( "#list" ).append( jComments.html() );
+
+				$( "#list" ).append( jComments.html() );
+
+				$( "#list" ).append( jComments.html() );
+
+			}
+
+			);
+      
+      </script>
   </head>
   <body>
-    <div id="rounded">
+    
+    <ul id="list" />
 
+	<div id="template" style="display: none ;">
 
+		<!--
 
-<div class="clear"></div> <!-- the above links are floated - we have to use the clearfix hack -->
+			<li>This is an LI template.</li>
 
-<div id="pageContent"> <!-- this is where our AJAX-ed content goes -->
+		-->
 
-  
-
-  </div>
-
-</div>
-
-<div class="clear"></div> <!-- clearing just in case -->
-
-
-
-</div>
+	</div>
+    
   </body>
  </html>
- <script>
-   
-   $(document).ready(function(){	//executed after the page has loaded
-
- checkURL();	//check if the URL has a reference to a page and load it
-
- $('ul li a').click(function (e){	//traverse through all our navigation links..
-
- checkURL(this.hash);	//.. and assign them a new onclick event, using their own hash as a parameter (#page1 for example)
-
- });
-
- setInterval("checkURL()",250);	//check for a change in the URL every 250 ms to detect if the history buttons have been used
-
-});
-
-var lasturl="";	//here we store the current URL hash
-
-function checkURL(hash)
-
-  {
-
-  if(!hash) hash=window.location.hash;	//if no parameter is provided, use the hash value from the current address
-
- if(hash != lasturl)	// if the hash value has changed
-
-  {
-
-  lasturl=hash;	//update the current hash
-
-  loadPage(hash);	// and load the new page
-
-  }
-
-  }
-
-function loadPage(url)	//the function that loads pages via AJAX
-
-  {
-
-  url=url.replace('#page','');	//strip the #page part of the hash and leave only the page number
-
- $('#loading').css('visibility','visible');	//show the rotating gif animation
-
- $.ajax({	//create an ajax request to load_page.php
-
-  type: "POST",
-
-  url: "load_page.php",
-
-  data: 'page='+url,	//with the page number as a parameter
-
-  dataType: "html",	//expect html to be returned
-
-  success: function(msg){
-
- if(parseInt(msg)!=0)	//if no errors
-
-  {
-
-  $('#pageContent').html(msg);	//load the returned html into pageContet
-
-  $('#loading').css('visibility','hidden');	//and hide the rotating gif
-
-  }
-
-  }
-
- });
-
-}
-   
+ 
