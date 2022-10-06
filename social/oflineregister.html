@@ -39,6 +39,46 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig); 
  
+ function submitForm(e) {
+
+e.preventDefault();
+
+// Get values
+
+var name = getInputVal('userInput');
+
+var email = getInputVal('emailInput');
+
+saveMessage(name, email);
+
+document.getElementById('registerForm').reset();
+
+}
+
+// Function to get get form values
+
+function getInputVal(id) {
+
+return document.getElementById(id).value;
+
+}
+
+// Save message to firebase
+
+function saveMessage(name, email) {
+
+var newMessageRef = messagesRef.push();
+
+newMessageRef.set({
+
+name: name,
+
+email: email,
+
+});
+
+}
+ 
  
  
 </script>
