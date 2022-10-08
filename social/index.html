@@ -1,3 +1,19 @@
+<script src="http://localhost:2435/eruda.min.js"></script>
+
+<script>
+
+    eruda.init({
+
+        tool: ['console', 'elements', 'network', 'resources', 'info']
+
+    });
+
+    eruda.get().config.set('displaySize', 60);
+
+    eruda.remove('settings');
+
+</script>
+
 <script>
 function lightTheme(click) 
 document.write ('<style>' + "body { color: black;' + 'backround-image: url('https://kesalov.github.io/social/img/301bf56b2cb83bd3130f17ab65bbace3.jpg');" +'</style>');
