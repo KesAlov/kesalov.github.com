@@ -7,7 +7,7 @@
 
 ### разработчики
 + Георгий Чакалов
-  + [@Гиги](https://kesalov.github.io/social/profiles/Gigi.html)
+  + [@Гиги](https://kesalov.github.io/social/profiles/gigi.html)
 + Кесов Ставрос
   + [@Кесов](https://kesalov.github.io/social/profiles/kesovstavros) 
   
