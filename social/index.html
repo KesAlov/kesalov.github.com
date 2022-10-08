@@ -394,45 +394,6 @@ else
 
 <script>
 
-// Attach a submit handler to the form
-
-$( "#searchForm" ).submit(function( event ) {
-
- 
-
-  // Stop form from submitting normally
-
-  event.preventDefault();
-
- 
-
-  // Get some values from elements on the page:
-
-  var $form = $( this ),
-
-    term = $form.find( "input[name='s']" ).val(),
-
-    url = $form.attr( "action" );
-
- 
-
-  // Send the data using post
-
-  var posting = $.post( url, { s: term } );
-
- 
-
-  // Put the results in a div
-
-  posting.done(function( data ) {
-
-    var content = $( data ).find( "#content" );
-
-    $( "#result" ).empty().append( content );
-
-  });
-
-});
 
 </script>
     
@@ -463,10 +424,7 @@ $( "#searchForm" ).submit(function( event ) {
        
    
    <button onclick="location.href='/social/support.html';" />служба поддержки</button><br>
-   <button onclick="
-
-document.write ('<style>' + 'body { color: black;' +/" backround-image: url('https://kesalov.github.io/social/img/301bf56b2cb83bd3130f17ab65bbace3.jpg');/" +'</style>'); " style="backround-color: #ffffff; color: black;">светлая тема</button>
-<button onclick="location.href='/social/чат.html';" />чат</button><br>
+   <button onclick="location.href='/social/чат.html';" />чат</button><br>
 	
    
 	   
