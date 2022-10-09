@@ -1,3 +1,10 @@
 body {
 	backround-image: (https://lh3.googleusercontent.com/op/ADCBK25K8wfoXxBjp40dUEZrcAUrQU19GbC29GhrdutKKm9Ok5qkYaVgpZI21vvMoO1GDx3bl5uOpXMUXDto3JvtsWUWflrqtQ=w464-h131-p);
-	} 
+	}
+	
+button {
+	backround-color: green;
+	border: 20%;
+	border-radius: 20px;
+	}
+	
