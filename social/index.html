@@ -14,8 +14,19 @@
     <script>
     	
     function profile_name() {} 
-    	
-        document.write('<div class="dropdown">' + '<button class="dropbtn">' + username + "</button>" + '<div class="dropdown-content">' + '<a href="/social/profile.html">профиль</a>' + "</div>" + "</div>" );
+ 	
+
+    if ( username ) {
+
+      document.write('<div class="dropdown">' + '<button class="dropbtn">' + username + "</button>" + '<div class="dropdown-content">' + '<a href="/social/profile.html">профиль</a>' + "</div>" + "</div>" );
+      
+     } 
+     
+     else {
+     	
+     document.write ( '<h2>ещё нет аккаунта? Так <a href="oflineregister.html">зарегистрируйся</a></h2><br>' )
+     	
+    } 
         
     
     	
@@ -33,12 +44,14 @@
     <link rel="stylesheet" href="/social/profile.css">
     <title>социальная сеть KAsocial</title>
     <h1> <div class="post" id="post-<?php the_ID(); ?>">
+    <div class="singout"></div>
 
             
-                </div></h1>
+                
+             
 
-            </div> 
-  <h2>ещё нет аккаунта? Так <a href="oflineregister.html">зарегистрируйся</a></h2><br>
+            
+  
  
  
         
@@ -53,7 +66,6 @@
 
 </form>
 
-<!-- the result of the search will be rendered inside this div -->
 
 <div id="result"></div>
 
