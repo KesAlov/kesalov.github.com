@@ -1,5 +1,5 @@
 $(function() {
-  var ref = new Firebase("https://kacomments-e9531.firebaseio.com/"),
+  var ref = new Firebase("https://console.firebase.google.com/u/0/project/kacomments-e9531/database/kacomments-e9531-default-rtdb/data/~2F"),
   postRef = ref.child(slugify(window.location.pathname));
 
   postRef.on("child_added", function(snapshot) {
