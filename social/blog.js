@@ -6,7 +6,7 @@ $(function() {
     var newPost = snapshot.val();
     $(".comments").prepend('<div class="comment">' +
     '<h4>' + newPost.name + '</h4>' +
-    '<div class="profile-image"><img src="http://www.gravatar.com/avatar/' + newPost.md5Email + '?s=100&d=retro"/></div> ' +
+    '' +
     '<span class="date">' + moment(newPost.postedAt).fromNow() + '</span><p>' + newPost.message  + '</p></div>');
   });
 
