@@ -1,15 +1,3 @@
-Неверно:
-
-User-agent: Kesalov
-
-Disallow: /корзина
-
-Sitemap: kesalov.github.io
-
-#Верно:
-
-User-agent: Kesalov
-
-Disallow: kesalov.github.io
-
-Sitemap: https://kesalov.github.io/
+User-agent: *
+Disallow:
+Sitemap: http://kesalov.github.io/sitemap.xml
