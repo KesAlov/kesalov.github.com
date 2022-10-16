@@ -2,54 +2,14 @@
 <!DOCTYPE html>
 <html lang="ru" >
   <head>
-    <link rel="stylesheet" href="/social/profile.css">
-    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.0/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.1.0/js/md5.js"></script>
-<script src="/social/blog.js"></script>
-    
+  	<title>посты</title>
+      <link rel="stylesheet" href="/social/profile.css">
+      <h1>посты</h1>
   </head>
-<body>
-	<form id="comment">
-  <label for="message">текст</label>
-  <textarea id="message"></textarea><br>
-
-  <label for="name">Name</label>
-  <input type="text" id="name"><br>
-
-  <label for="email">Email</label>
-  <input type="text" id="email"><br>
-
-  <input type="submit" value="написать пост" class="submit"><br>
-</form>
-<hr>
-
-<div class="comments"></div>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyBRgPtWD0tLFQwhs4sT6TM-8Bqc81FfaL0",
-    authDomain: "kacomments-e9531.firebaseapp.com",
-    databaseURL: "https://kacomments-e9531-default-rtdb.firebaseio.com",
-    projectId: "kacomments-e9531",
-    storageBucket: "kacomments-e9531.appspot.com",
-    messagingSenderId: "22808809283",
-    appId: "1:22808809283:web:c5950e7437b74d9637e9f6"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script>
-    
-    
-	
-    
-  </body>
- </html>
- 
+  <body>
+  	<box>
+  	<h4>Первый пост</h4>
+      <h5>автор: <a href="/social/profiles/kesovstavros.html">@Ставрос</a></h5>
+      Привет мир!
+      </box>
+   </body>
