@@ -534,7 +534,7 @@ backround-color: green;
 } 
 
 video::-webkit-media-controls-play-button {
-  background-color: green;
+  background-color: #34c924;
   border-radius: 50%;
 }
 
