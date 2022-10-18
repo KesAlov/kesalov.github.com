@@ -2,6 +2,18 @@
 <!DOCTYPE html>
 <html lang="ru" >
   <head>
+  	<script>
+  	var video = document.getElementById('video');
+video.addEventListener('click',function(){
+  video.play();
+},false); 
+
+function playVideo(video){
+    window.JSInterface.startVideo(video);
+  }
+
+</script>
+  
   	<title>посты</title>
       <link rel="stylesheet" href="/social/profile.css">
       <h1>посты</h1>
