@@ -543,3 +543,7 @@ video::-webkit-media-controls-timeline {
   padding-bottom: 0;
   margin-bottom: 20px;
 }
+
+.controls button {
+  backround-color: green;
+}
