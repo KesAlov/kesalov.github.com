@@ -533,25 +533,13 @@ backround-color: green;
 
 } 
 
-video::-webkit-media-controls-timeline {
-  background-color: cyan;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-}
 video::-webkit-media-controls-play-button {
   background-color: green;
   border-radius: 50%;
 }
 
-video::-webkit-media-controls-mute-button {
-  background-color: #009b76;
-  border-radius: 50%;
-}
-
-video::-webkit-media-controls-volume-slider {
-  background-color: green;
-  padding-top: 0;
-  margin-top: 20px;
+::-webkit-media-controls-timeline {
+  background-color: cyan;
   padding-bottom: 0;
+  margin-bottom: 20px;
 }
-
