@@ -524,3 +524,15 @@ toolbar {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 	
+
+video {
+	
+border:2px solid blue;
+	
+backround-color: green;
+
+
+
+
+
+} 
