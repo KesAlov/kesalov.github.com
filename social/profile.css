@@ -538,7 +538,7 @@ video::-webkit-media-controls-play-button {
   border-radius: 50%;
 }
 
-::-webkit-media-controls-timeline {
+video::-webkit-media-controls-timeline {
   background-color: cyan;
   padding-bottom: 0;
   margin-bottom: 20px;
