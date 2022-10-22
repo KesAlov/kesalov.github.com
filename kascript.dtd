@@ -353,6 +353,36 @@
   %attrs;                              -- %coreattrs, %i18n, %events --
 
   >
+  
+  <!ELEMENT КНОПКА - -
+
+     (%flow;)* -(A|%formctrl;|FORM|ISINDEX|FIELDSET|IFRAME)
+
+     -- push button -->
+
+<!ATTLIST КНОПКА
+
+  %attrs;                              -- %coreattrs, %i18n, %events --
+
+  name        CDATA          #IMPLIED
+
+  value       CDATA          #IMPLIED  -- sent to server when submitted --
+
+  type        (button|submit|reset) submit -- for use as form button --
+
+  disabled    (disabled)     #IMPLIED  -- unavailable in this context --
+
+  tabindex    NUMBER         #IMPLIED  -- position in tabbing order --
+
+  accesskey   %Character;    #IMPLIED  -- accessibility key character --
+
+  onfocus     %Script;       #IMPLIED  -- the element got the focus --
+
+  onblur      %Script;       #IMPLIED  -- the element lost the focus --
+
+  %reserved;                           -- reserved for possible future use --
+
+  >
 
 
  
