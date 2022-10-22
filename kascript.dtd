@@ -1,4 +1,6 @@
 <!ELEMENT kascript (version)>
 <!ELEMENT version (#PCDATA)>
+<!ELEMENT inport (url)>
+<!ELEMENT text (text)>
 
  
