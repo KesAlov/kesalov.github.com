@@ -2,5 +2,356 @@
 <!ELEMENT version (#PCDATA)>
 <!ELEMENT inport (url)>
 <!ELEMENT text (text)>
+<!ENTITY % Kascript.Version "-//KA//DTD KA 1.00 Transitional//RU"
+  --Typical usage:
+  <!DOCTYPE kascript PUBLIC "-//KA//DTD Kascript 1.00 Transitional//RU>
+  <kascript version="1.0">
+  ...
+  <head>
+  ...
+  </head>
+  <body>
+ ...
+  </body>
+ ...
+ --!>
+ <!-- Feature Switch for frameset documents -->
+
+<!ENTITY % HTML.Frameset "IGNORE">
+
+<!ENTITY % ContentType "CDATA"
+
+    -- media type, as per [RFC2045]
+
+    -->
+
+<!ENTITY % ContentTypes "CDATA"
+
+    -- comma-separated list of media types, as per [RFC2045]
+
+    -->
+
+<!ENTITY % Charset "CDATA"
+
+    -- a character encoding, as per [RFC2045]
+
+    -->
+
+<!ENTITY % Charsets "CDATA"
+
+    -- a space-separated list of character encodings, as per [RFC2045]
+
+    -->
+
+<!ENTITY % LanguageCode "NAME"
+
+    -- a language code, as per [RFC1766]
+
+    -->
+
+<!ENTITY % Character "CDATA"
+
+    -- a single character from [ISO10646] 
+
+    -->
+
+<!ENTITY % LinkTypes "CDATA"
+
+    -- space-separated list of link types
+
+    -->
+
+<!ENTITY % MediaDesc "CDATA"
+
+    -- single or comma-separated list of media descriptors
+
+    -->
+
+<!ENTITY % URI "CDATA"
+
+    -- a Uniform Resource Identifier,
+
+       see [URI]
+
+    -->
+
+<!ENTITY % Datetime "CDATA" -- date and time information. ISO date format -->
+
+<!ENTITY % Script "CDATA" -- script expression -->
+
+<!ENTITY % StyleSheet "CDATA" -- style sheet data -->
+
+<!ENTITY % FrameTarget "CDATA" -- render in this frame -->
+
+<!ENTITY % Text "CDATA">
+
+<!-- Parameter Entities -->
+
+<!ENTITY % head.misc "SCRIPT|STYLE|META|LINK|OBJECT" -- repeatable head elements -->
+
+<!ENTITY % heading "H1|H2|H3|H4|H5|H6">
+
+<!ENTITY % list "UL | OL |  DIR | MENU">
+
+<!ENTITY % preformatted "PRE">
+
+<!ENTITY % Color "CDATA" -- a color using sRGB: #RRGGBB as Hex values -->
+
+<!-- There are also 16 widely known color names with their sRGB values:
+
+    Black  = #000000    Green  = #008000
+
+    Silver = #C0C0C0    Lime   = #00FF00
+
+    Gray   = #808080    Olive  = #808000
+
+    White  = #FFFFFF    Yellow = #FFFF00
+
+    Maroon = #800000    Navy   = #000080
+
+    Red    = #FF0000    Blue   = #0000FF
+
+    Purple = #800080    Teal   = #008080
+
+    Fuchsia= #FF00FF    Aqua   = #00FFFF
+
+ -->
+
+<!ENTITY % bodycolors "
+
+  bgcolor     %Color;        #IMPLIED  -- document background color --
+
+  text        %Color;        #IMPLIED  -- document text color --
+
+  link        %Color;        #IMPLIED  -- color of links --
+
+  vlink       %Color;        #IMPLIED  -- color of visited links --
+
+  alink       %Color;        #IMPLIED  -- color of selected links --
+
+  ">
+
+<!--================ Character mnemonic entities =========================-->
+
+<!ENTITY % HTMLlat1 PUBLIC
+
+   "-//W3C//ENTITIES Latin1//EN//HTML"
+
+   "HTMLlat1.ent">
+
+%HTMLlat1;
+
+<!ENTITY % HTMLsymbol PUBLIC
+
+   "-//W3C//ENTITIES Symbols//EN//HTML"
+
+   "HTMLsymbol.ent">
+
+%HTMLsymbol;
+
+<!ENTITY % HTMLspecial PUBLIC
+
+   "-//W3C//ENTITIES Special//EN//HTML"
+
+   "HTMLspecial.ent">
+
+%HTMLspecial;
+
+<!--=================== Generic Attributes ===============================-->
+
+<!ENTITY % coreattrs
+
+ "id          ID             #IMPLIED  -- document-wide unique id --
+
+  class       CDATA          #IMPLIED  -- space-separated list of classes --
+
+  style       %StyleSheet;   #IMPLIED  -- associated style info --
+
+  title       %Text;         #IMPLIED  -- advisory title --"
+
+  >
+
+<!ENTITY % i18n
+
+ "lang        %LanguageCode; #IMPLIED  -- language code --
+
+  dir         (ltr|rtl)      #IMPLIED  -- direction for weak/neutral text --"
+
+  >
+
+<!ENTITY % events
+
+ "onclick     %Script;       #IMPLIED  -- a pointer button was clicked --
+
+  ondblclick  %Script;       #IMPLIED  -- a pointer button was double clicked--
+
+  onmousedown %Script;       #IMPLIED  -- a pointer button was pressed down --
+
+  onmouseup   %Script;       #IMPLIED  -- a pointer button was released --
+
+  onmouseover %Script;       #IMPLIED  -- a pointer was moved onto --
+
+  onmousemove %Script;       #IMPLIED  -- a pointer was moved within --
+
+  onmouseout  %Script;       #IMPLIED  -- a pointer was moved away --
+
+  onkeypress  %Script;       #IMPLIED  -- a key was pressed and released --
+
+  onkeydown   %Script;       #IMPLIED  -- a key was pressed down --
+
+  onkeyup     %Script;       #IMPLIED  -- a key was released --"
+
+  >
+
+<!-- Reserved Feature Switch -->
+
+<!ENTITY % HTML.Reserved "IGNORE">
+
+<!-- The following attributes are reserved for possible future use -->
+
+<![ %HTML.Reserved; [
+
+<!ENTITY % reserved
+
+ "datasrc     %URI;          #IMPLIED  -- a single or tabular Data Source --
+
+  datafld     CDATA          #IMPLIED  -- the property or column name --
+
+  dataformatas (plaintext|html) plaintext -- text or html --"
+
+  >
+
+]]>
+
+<!ENTITY % reserved "">
+
+<!ENTITY % attrs "%coreattrs; %i18n; %events;">
+
+<!ENTITY % align "align (left|center|right|justify)  #IMPLIED"
+
+                   -- default is left for ltr paragraphs, right for rtl --
+
+  >
+
+<!--=================== Text Markup ======================================-->
+
+<!ENTITY % fontstyle
+
+ "TT | I | B | U | S | STRIKE | BIG | SMALL">
+
+<!ENTITY % phrase "EM | STRONG | DFN | CODE |
+
+                   SAMP | KBD | VAR | CITE | ABBR | ACRONYM" >
+
+<!ENTITY % special
+
+   "A | IMG | APPLET | OBJECT | FONT | BASEFONT | BR | SCRIPT |
+
+    MAP | Q | SUB | SUP | SPAN | BDO | IFRAME">
+
+<!ENTITY % formctrl "INPUT | SELECT | TEXTAREA | LABEL | BUTTON">
+
+<!-- %inline; covers inline or "text-level" elements -->
+
+<!ENTITY % inline "#PCDATA | %fontstyle; | %phrase; | %special; | %formctrl;">
+
+<!ELEMENT (%fontstyle;|%phrase;) - - (%inline;)*>
+
+<!ATTLIST (%fontstyle;|%phrase;)
+
+  %attrs;                              -- %coreattrs, %i18n, %events --
+
+  >
+
+<!ELEMENT (SUB|SUP) - - (%inline;)*    -- subscript, superscript -->
+
+<!ATTLIST (SUB|SUP)
+
+  %attrs;                              -- %coreattrs, %i18n, %events --
+
+  >
+
+%Color;        #IMPLIED  -- text color --
+
+  face        CDATA          #IMPLIED  -- comma-separated list of font names --
+
+  >
+
+<!ELEMENT FONT - - (%inline;)*         -- local change to font -->
+
+<!ATTLIST FONT
+
+  %coreattrs;                          -- id, class, style, title --
+
+  %i18n;		               -- lang, dir --
+
+  size        CDATA          #IMPLIED  -- [+|-]nn e.g. size="+1", size="4" --
+
+  color       %Color;        #IMPLIED  -- text color --
+
+  face        CDATA          #IMPLIED  -- comma-separated list of font names --
+
+  >
+
+<!ELEMENT BR - O EMPTY                 -- forced line break -->
+
+<!ATTLIST BR
+
+  %coreattrs;                          -- id, class, style, title --
+
+  clear       (left|all|right|none) none -- control of text flow --
+
+  >
+
+<!--================== HTML content models ===============================-->
+
+<!--
+
+    HTML has two basic content models:
+
+        %inline;     character level elements and text strings
+
+        %block;      block-like elements e.g. paragraphs and lists
+
+-->
+
+<!ENTITY % block
+
+     "P | %heading; | %list; | %preformatted; | DL | DIV | CENTER |
+
+      NOSCRIPT | NOFRAMES | BLOCKQUOTE | FORM | ISINDEX | HR |
+
+      TABLE | FIELDSET | ADDRESS">
+
+<!ENTITY % flow "%block; | %inline;">
+
+<!--=================== Document Body ====================================-->
+
+<!ELEMENT BODY O O (%flow;)* +(INS|DEL) -- document body -->
+
+<!ATTLIST BODY
+
+  %attrs;                              -- %coreattrs, %i18n, %events --
+
+  onload          %Script;   #IMPLIED  -- the document has been loaded --
+
+  onunload        %Script;   #IMPLIED  -- the document has been removed --
+
+  background      %URI;      #IMPLIED  -- texture tile for document
+
+                                          background --
+
+  %bodycolors;                         -- bgcolor, text, link, vlink, alink --
+
+  >
+
+<!ELEMENT ADDRESS - - ((%inline;)|P)*  -- information on author -->
+
+<!ATTLIST ADDRESS
+
+  %attrs;                              -- %coreattrs, %i18n, %events --
+
+  >
+
 
  
