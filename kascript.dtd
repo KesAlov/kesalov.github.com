@@ -1,0 +1,4 @@
+<!ELEMENT kascript (version)>
+<!ELEMENT version (#PCDATA)>
+
+ 
