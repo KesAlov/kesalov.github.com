@@ -2,12 +2,18 @@
 <xsd:kascript>
   <xsd:inport></xsd:inport>
   <xsd:version></xsd:version>
-</xsd:kascript>
-<xsd:info>
+
+ <xsd:info>
   <xsd:name></xsd:name>
   <xsd:description></xsd:description>
   <xsd:type></xsd:type>
   <xsd:site></xsd:site>
   <xsd:text></xsd:text>
-</xsd:info>
+ </xsd:info>
+ </xsd:kascript>
+       
+
+
+
+
 </xsd:schema>
