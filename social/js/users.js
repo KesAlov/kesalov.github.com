@@ -9,7 +9,7 @@ if ( uid == "****-****-****-****") {
 	
 	setCookie("username", "Кесов Ставрос");
 	setCookie("email", "kesovstavros0@gmail.com");
-	
+	alert ("Добро пожаловать, Кесов Ставрос");
 	} 
 
 		
