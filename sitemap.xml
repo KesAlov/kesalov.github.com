@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://kesalov.github.io</loc>
-<changefreq>сайт</changefreq>
+<changefreq>index.html</changefreq>
 <priority>0.9</priority>
 </url>
 <url>
 	<loc>http://kesalov.github.io/social/</loc>
-	<changefreq>социальная сеть</changefreq>
+	<changefreq>social</changefreq>
 </url>
 <url>
 	<loc>http://kesalov.github.io/store/</loc>
-	<changefreq>магазин</changefreq>
+	<changefreq>shop</changefreq>
 </url>
 <url>
 	<loc>http://kesalov.github.io/social/profiles/companies/KesAlov</loc>
-	<changefreq>профиль компании</changefreq>
+	<changefreq>companyprofile</changefreq>
 </url>
 
 </urlset>
