@@ -1,4 +1,4 @@
-
+inport setCookie from "https://kesalov.github.io/kesalov.singin.min.js";
 function login() {
 	var uid = document.getElementById('uid');
 if ( uid == '0000-0000-0000-0000') {
