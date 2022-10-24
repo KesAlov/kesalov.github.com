@@ -12,7 +12,7 @@ if ( uid == "****-****-****-****") {
 	alert ("Добро пожаловать, Кесов Ставрос");
 	} 
 	
-	setCookie("uid", uid);
-
+	setCookie("uid", uid, 30);
+    window.location.href = "index.html";
 		
 	} 
