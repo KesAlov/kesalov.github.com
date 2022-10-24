@@ -12,7 +12,7 @@
 
 .dropbtn {
 
-    background-color: #4CAF50;
+    background-color: #ffffff;
 
     color: white;
 
@@ -42,7 +42,7 @@
 
     position: absolute;
 
-    background-color: #f1f1f1;
+    background-color: #f0f0f0;
 
     min-width: 160px;
 
@@ -76,7 +76,7 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {background-color: #f0f0f0;}
   
  .center {
    left: 50%;
@@ -124,16 +124,23 @@
    <div class="dropdown">
    <div class="bgImgLoaded" > </div>
 .
-  <button class="dropbtn"><img src="menu.png" alt="image"
+  <button class="dropbtn"><img src="menu.png" alt="image" title="меню" 
 
                width="50" height="50"> </button><h1>Официальный сайт KesAlov</h1>
 
   <div class="dropdown-content"> 
       
+        <ul>
+        <li><a href="store.html">KAstore</a></li>
         
-        <a href="store.html">KAstore</a>
+        <li><a href="/social/">соцсеть</a>
+        <ul>
+        	<li><a href="social/profile.html">Профиль</a></li>
+            <li><a href="social/newpost.html">создать пост</a></li>
+            </ul>
+            </li>
+           </ul>
         
-        <a href="/social/">соцсеть</a>
     
     </div>
    </div>
