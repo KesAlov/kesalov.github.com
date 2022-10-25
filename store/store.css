@@ -1,10 +1,10 @@
 body {
-	backround-image: url(kesalov.github.com/social/img/301bf56b2cb83bd3130f17ab65bbace3.jpg);
+	backround-color: black;
 	}
 	
 button {
 	backround-color: #68CF00;
-	border: 2px;
+	border: 2px solid black;
 	border-radius: 10px;
 	}
 	
