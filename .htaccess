@@ -13,17 +13,14 @@ SetEnvIf GEOIP_COUNTRY_CODE US BlockCountry
 SetEnvIf GEOIP_COUNTRY_CODE UA BlockCountry
 
 Deny from env=BlockCountry
-// ***поиск***
-search.html - 666 
-/admin.php - 666
 
-RewriteCond %{REQUEST_URI} ^/ru/services/?.$ 
 
-RewriteCond %{REQUEST_METHOD} =POST
+// ***делаем сайт стачическим***
 
-RewriteRule ^(.)$ http://timeweb/ru/new$1 [R=405,L]
+RewriteCond %{REQUEST_FILENAME} !\.(js|css|gif|jpg|jpeg|png|ico|swf|pdf|html|php|json|svg|dtd|htaccess)$
+  
+// ***эмэил админа***
 
-// ***делаем сайт стачическим
+ServerSignature EMail
+SetEnv SERVER_ADMIN kesovstavros0@gmail.com
 
-RewriteCond %{REQUEST_FILENAME} !\.(js|css|gif|jpg|jpeg|png|ico|swf|pdf|html|php|json|svg|dtd)$
-   
