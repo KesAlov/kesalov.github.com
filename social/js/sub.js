@@ -9,6 +9,15 @@ request.onload = function() {
  
 
 function sub(profile) {
+	var requestURL = 'https://kesalov.github.io/social/databases/json/subs.json';
+var request = new XMLHttpRequest();
+request.responseType = 'json';
+request.send();
+request.onload = function() {
+  var subs = request.response;
+ } 
+ 
+ 
 	
 	var myJSON = { "name": profile};
 myJSON
