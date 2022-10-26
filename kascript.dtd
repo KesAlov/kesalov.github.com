@@ -5,7 +5,7 @@
 <!ENTITY % Kascript.Version "-//KA//DTD KA 1.00 Transitional//RU"
   --Typical usage:
   <!DOCTYPE kascript PUBLIC "-//KA//DTD Kascript 1.00 Transitional//RU" 
-  "https://kesalov.github.io/kascript.dtd>
+  "https://kesalov.github.io/kascript.dtd">
   <kascript version="1.0">
   ...
   <head>
