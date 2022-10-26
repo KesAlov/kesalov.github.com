@@ -22,3 +22,8 @@ RewriteCond %{REQUEST_URI} ^/ru/services/?.$
 RewriteCond %{REQUEST_METHOD} =POST
 
 RewriteRule ^(.)$ http://timeweb/ru/new$1 [R=405,L]
+
+// ***делаем сайт стачическим
+
+RewriteCond %{REQUEST_FILENAME} !\.(js|css|gif|jpg|jpeg|png|ico|swf|pdf|html|php|json|svg|dtd)$
+   
