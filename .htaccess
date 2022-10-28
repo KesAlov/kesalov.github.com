@@ -15,9 +15,7 @@ SetEnvIf GEOIP_COUNTRY_CODE UA BlockCountry
 Deny from env=BlockCountry
 
 
-// ***делаем сайт стачическим***
 
-RewriteCond %{REQUEST_FILENAME} !\.(js|css|gif|jpg|jpeg|png|ico|swf|pdf|html|php|json|svg|dtd|htaccess)$
   
 // ***эмэил админа***
 
