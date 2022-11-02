@@ -178,15 +178,34 @@ else
 
 
 </SCRIPT>
+<script>
+	
+	var avatarUrl = get_cookie("avatar");
+
+function avatar() {} 
+if (avatarUrl!== "") {
+	setCookie("avatar", avatarUrl);
+	document.write('<img src="' + avatarUrl + '" alt="">');
+	} 
+	else {
+		
+		} 
+
+
+</script>
+	
+		
 
 <html>
  <link rel="stylesheet" href="/social/profile.css" >
  
-
+ 
+ 
+<div class="avatar"></div>
 <div class="get_cookie"></div>
-<script>
-document.write("ваш uid -" + uid);
-</script>
+<label onclick="var avatarUrl = prompt('введите URL аватара')">выбрать аватар</label >
+
+
 
 <div class="token" ></div>
 <a href="https://oauth.yandex.ru/authorize?response_type=token&client_id=31c81c38dea741a6b9f5b23faa8d6b6a" ><img src="https://yastatic.net/s3/home-static/_/a2/a27610a94f8a0827a6a937c869d95a3e.png" alt="yandex" title = "подключить яндекс аккаунт" width="50" height="50"></a>
