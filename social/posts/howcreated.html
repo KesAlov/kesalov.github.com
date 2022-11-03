@@ -62,6 +62,10 @@
 <script src="https://yastatic.net/share2/share.js" async></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+<script type="text/javascript">
+  VK.init({ apiId: 0, onlyWidgets: true });
+</script>
          
   </head>
   <body>
@@ -228,6 +232,7 @@ var show_avatar = 1 // 1 - показывать аватар, 0 - не пока�
 <script>
 	$j(comment_id).parent().after('<div id="comment-preview-block"><h2>Предпросмотр комментария:</h2><div id="comment-preview">'+ avatar +'<div><strong id="preview-author"><a href="'+ url +'">'+ author +'</a></strong>&nbsp;пишет:</div><div id="ctext"></div></div></div>');
 </script>
+
 <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
 <script type="text/javascript">
   VK.init({ apiId: 0, onlyWidgets: true });
@@ -236,7 +241,7 @@ var show_avatar = 1 // 1 - показывать аватар, 0 - не пока�
 <!-- Put this div tag to the place, where the Comments block will be -->
 <div id="vk_comments"></div>
 <script type="text/javascript">
-  VK.Widgets.Comments("vk_comments", {limit: 20, attach: "*"});
+  VK.Widgets.Comments("vk_comments", {limit: 20, attach: "*", width: 100px, pageUrl: "https://kesalov.github.io/" });
 </script>
    </body>
   </html>
