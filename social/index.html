@@ -4,6 +4,17 @@
 	
   <head>
   	<script>
+  	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  // true for mobile device
+  alert('вы используйте мобильное приложение, скачайте мобильное приложение на андроид. ' + 
+'Чтобы открыть браузерную версию, нажмите "ок"');
+}else{
+  // false for not mobile device
+  
+}
+  	
+  </script>
+  	<script>
   	var url = location.href; 
 var url2 = url.substring(url.indexOf("?"));
 if (url2 == "comment=%20открыто%20через%20KaStore") confirm("спасибо что пользуйтесь KaStore");
