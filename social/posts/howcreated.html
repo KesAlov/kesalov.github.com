@@ -228,7 +228,16 @@ var show_avatar = 1 // 1 - показывать аватар, 0 - не пока�
 <script>
 	$j(comment_id).parent().after('<div id="comment-preview-block"><h2>Предпросмотр комментария:</h2><div id="comment-preview">'+ avatar +'<div><strong id="preview-author"><a href="'+ url +'">'+ author +'</a></strong>&nbsp;пишет:</div><div id="ctext"></div></div></div>');
 </script>
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+<script type="text/javascript">
+  VK.init({ apiId: 0, onlyWidgets: true });
+</script>
 
+<!-- Put this div tag to the place, where the Comments block will be -->
+<div id="vk_comments"></div>
+<script type="text/javascript">
+  VK.Widgets.Comments("vk_comments", {limit: 20, attach: "*"});
+</script>
    </body>
   </html>
     
