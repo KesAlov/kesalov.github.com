@@ -81,13 +81,16 @@ if (url2 == "comment=%20открыто%20через%20KaStore") confirm("спа�
 
 <script>
 	
-	if( username == "") {
+	if (username == "") {
+	
 	sendNotification('KAsocial', {
 body: 'Добро пожаловать в KAsocial',
 icon: 'https://kesalov.github.io/social/img/KAsocial%20logotype.png',
 dir: 'auto'
 });
-} 
+} else {
+	/*welcome*/
+	} 
 
   
 
