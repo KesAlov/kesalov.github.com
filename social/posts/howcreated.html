@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+	
 <script>
 
       function closePrint() {
@@ -58,6 +59,8 @@
         <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
 
 <script src="https://yastatic.net/share2/share.js" async></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
          
   </head>
   <body>
@@ -211,6 +214,212 @@ display: block;<br>
 <script src="https://yastatic.net/share2/share.js"></script>
 
 <div class="ya-share2" data-curtain data-color="white" data-shape="round" data-size="l" data-limit="0" data-more-button-type="short" data-services="messenger,vkontakte,odnoklassniki,telegram,viber,whatsapp,moimir,pinterest,skype,tumblr,evernote,linkedin,lj,blogger,delicious,digg,reddit,pocket,qzone,renren,sinaWeibo,surfingbird,tencentWeibo">поделиться</div>
+<script>
+
+<!--
+
+var dle_root       = '/';
+
+var dle_admin      = '';
+
+var dle_login_hash = '61df922759ac11a3d8bb90a6570b8e80b631b974';
+
+var dle_group      = 5;
+
+var dle_skin       = 'maincraft';
+
+var dle_wysiwyg    = '-1';
+
+var quick_wysiwyg  = '0';
+
+var dle_min_search = '4';
+
+var dle_act_lang   = ["Да", "Нет", "Ввод", "Отмена", "Сохранить", "Удалить", "Загрузка. Пожалуйста, подождите..."];
+
+var menu_short     = 'Быстрое редактирование';
+
+var menu_full      = 'Полное редактирование';
+
+var menu_profile   = 'Просмотр профиля';
+
+var menu_send      = 'Отправить сообщение';
+
+var menu_uedit     = 'Админцентр';
+
+var dle_info       = 'Информация';
+
+var dle_confirm    = 'Подтверждение';
+
+var dle_prompt     = 'Ввод информации';
+
+var dle_req_field  = 'Заполните все необходимые поля';
+
+var dle_del_agree  = 'Вы действительно хотите удалить? Данное действие невозможно будет отменить';
+
+var dle_spam_agree = 'Вы действительно хотите отметить пользователя как спамера? Это приведёт к удалению всех его комментариев';
+
+var dle_c_title    = 'Отправка жалобы';
+
+var dle_complaint  = 'Укажите текст Вашей жалобы для администрации:';
+
+var dle_mail       = 'Ваш e-mail:';
+
+var dle_big_text   = 'Выделен слишком большой участок текста.';
+
+var dle_orfo_title = 'Укажите комментарий для администрации к найденной ошибке на странице:';
+
+var dle_p_send     = 'Отправить';
+
+var dle_p_send_ok  = 'Уведомление успешно отправлено';
+
+var dle_save_ok    = 'Изменения успешно сохранены. Обновить страницу?';
+
+var dle_reply_title= 'Ответ на комментарий';
+
+var dle_tree_comm  = '1';
+
+var dle_del_news   = 'Удалить статью';
+
+var dle_sub_agree  = 'Вы действительно хотите подписаться на комментарии к данной публикации?';
+
+var dle_captcha_type  = '0';
+
+var DLEPlayerLang     = {prev: 'Предыдущий',next: 'Следующий',play: 'Воспроизвести',pause: 'Пауза',mute: 'Выключить звук', unmute: 'Включить звук', settings: 'Настройки', enterFullscreen: 'На полный экран', exitFullscreen: 'Выключить полноэкранный режим', speed: 'Скорость', normal: 'Обычная', quality: 'Качество', pip: 'Режим PiP'};
+var allow_dle_delete_news   = false;
+
+
+jQuery(function($){
+
+$('#dle-comments-form').submit(function() {
+	doAddComments();
+	return false;
+});
+
+});
+
+//-->
+
+</script>
+<script>
+
+<!--
+
+var dle_root       = '/';
+
+var dle_admin      = '';
+
+var dle_login_hash = '61df922759ac11a3d8bb90a6570b8e80b631b974';
+
+var dle_group      = 5;
+
+var dle_skin       = 'maincraft';
+
+var dle_wysiwyg    = '-1';
+
+var quick_wysiwyg  = '0';
+
+var dle_min_search = '4';
+
+var dle_act_lang   = ["Да", "Нет", "Ввод", "Отмена", "Сохранить", "Удалить", "Загрузка. Пожалуйста, подождите..."];
+
+var menu_short     = 'Быстрое редактирование';
+
+var menu_full      = 'Полное редактирование';
+
+var menu_profile   = 'Просмотр профиля';
+
+var menu_send      = 'Отправить сообщение';
+
+var menu_uedit     = 'Админцентр';
+
+var dle_info       = 'Информация';
+
+var dle_confirm    = 'Подтверждение';
+
+var dle_prompt     = 'Ввод информации';
+
+var dle_req_field  = 'Заполните все необходимые поля';
+
+var dle_del_agree  = 'Вы действительно хотите удалить? Данное действие невозможно будет отменить';
+
+var dle_spam_agree = 'Вы действительно хотите отметить пользователя как спамера? Это приведёт к удалению всех его комментариев';
+
+var dle_c_title    = 'Отправка жалобы';
+
+var dle_complaint  = 'Укажите текст Вашей жалобы для администрации:';
+
+var dle_mail       = 'Ваш e-mail:';
+
+var dle_big_text   = 'Выделен слишком большой участок текста.';
+
+var dle_orfo_title = 'Укажите комментарий для администрации к найденной ошибке на странице:';
+
+var dle_p_send     = 'Отправить';
+
+var dle_p_send_ok  = 'Уведомление успешно отправлено';
+
+var dle_save_ok    = 'Изменения успешно сохранены. Обновить страницу?';
+
+var dle_reply_title= 'Ответ на комментарий';
+
+var dle_tree_comm  = '1';
+
+var dle_del_news   = 'Удалить статью';
+
+var dle_sub_agree  = 'Вы действительно хотите подписаться на комментарии к данной публикации?';
+
+var dle_captcha_type  = '0';
+
+var DLEPlayerLang     = {prev: 'Предыдущий',next: 'Следующий',play: 'Воспроизвести',pause: 'Пауза',mute: 'Выключить звук', unmute: 'Включить звук', settings: 'Настройки', enterFullscreen: 'На полный экран', exitFullscreen: 'Выключить полноэкранный режим', speed: 'Скорость', normal: 'Обычная', quality: 'Качество', pip: 'Режим PiP'};
+var allow_dle_delete_news   = false;
+
+
+jQuery(function($){
+
+$('#dle-comments-form').submit(function() {
+	doAddComments();
+	return false;
+});
+
+});
+
+//-->
+
+</script>
+<script>
+      document.addEventListener("DOMContentLoaded", function(event) { 
+          setTimeout(function () {
+
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-104430205-1', 'auto');
+          //ga('create', 'G-B4PX7TTRRJ', 'auto');
+          ga('send', 'pageview');
+                                
+          }, 1000)
+      })
+      </script>
+      <input type="hidden" name="subaction" value="addcomment">
+<input type="hidden" name="post_id" id="post_id" value="1"><input type="hidden" name="user_hash" value="61df922759ac11a3d8bb90a6570b8e80b631b974"></form>
+<div id="dlemasscomments"><div id="dle-comments-list">
+<div id="dle-ajax-comments"></div>
+<div id="comment"></div><ol class="comments-tree-list"><li id="comments-tree-item-113291" class="comments-tree-item"><div id="comment-id-113291" itemprop="comment" itemscope="" itemtype="https://schema.org/Comment"><div class="comment">
+<div class="flex">
+<div class="ava">
+<img src="/templates/maincraft/dleimages/noavatar.jpg" alt="">
+</div>
+<div class="comment-content">
+<div class="flex middle">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
    </body>
   </html>
