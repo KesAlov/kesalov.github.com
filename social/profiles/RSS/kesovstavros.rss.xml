@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:yandex="http://news.yandex.ru"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:turbo="http://turbo.yandex.ru"
+     version="2.0">
+    <channel>
+        <!-- Информация о сайте-источнике -->
+        <title>Кесов Ставрос</title>
+        <link>http://kesalov.github.io/social/profiles/kesovstavros</link>
+        <description>Admin</description>
+        <language>ru</language>
+        <turbo:analytics></turbo:analytics>
+        <turbo:adNetwork></turbo:adNetwork>
+        <item turbo="true">
+            <!-- Информация о странице -->
+            <turbo:extendedHtml>true</turbo:extendedHtml>
+            <link>http://kesalov.github.io/social/profiles/kesovstavros</link>
+            <turbo:source></turbo:source>
+            <turbo:topic></turbo:topic>
+            <pubDate>
+        21 oct 2022 14:15:00 +0300</pubDate>
+            <author>Кесов Ставрос</author>
+            <metrics>
+                <yandex schema_identifier="Идентификатор">
+                    <breadcrumblist>
+                        <breadcrumb url="https://kesalov.github.io/social/profiles/kesovstavros" text="прифиль"/>
+                    </breadcrumblist>
+                </yandex>
+            </metrics>
+            <yandex:related></yandex:related>
+            <turbo:content>
+                <![CDATA[
+                    <!-- Содержимое 1 страницы -->
+                    	
+                    
+<html lang="ru">
+
+<head>
+	<script src="https://kesalov.github.io/kesalov.singin.min.js"></script><script>
+	if ( username == "Кесов Ставрос") {
+		document.deleteElementById('subscribe');
+		else {
+			
+			};
+			
+			</script>
+<script src="https://kesalov.github.io/social/js/sub.js" ></script>
+ <title>Кесов Ставрос</title>
+  <link rel="stylesheet" href="/social/profile.css">
+  <h1><img src="https://yt3.ggpht.com/sKHKE_fCUlDOxFWIQWcJJv7CkELFdLbRSp_j5Y-t9HtFZE0RHpMuXYqTM5nECfZIpIvw36ppMw=s100-c-k-c0x00ffffff-no-rj" width="100" height="100" alt="profile" > Кесов Ставрос</h1>
+  <h2>пользователь</h2>
+  <h2>админ</h2>
+  </head>
+  <body>
+  <button id="subscribe" style="backround-color: gray;">вы подписаны</button>
+  
+    <ul>
+      <li><a href="https://m.youtube.com/channel/UCi-8Iq3iZEaOVTRPw1mfqnQ/"><img src="https://avatars.mds.yandex.net/get-entity_search/5508932/551805258/S122x122Fit_2x" alt="youtube" width="50" height="25"></a><script src="https://apis.google.com/js/platform.js"></script>
+
+<div class="g-ytsubscribe" data-channelid="UCi-8Iq3iZEaOVTRPw1mfqnQ" ></div>
+
+</li>
+      <li>почта: kesovstavros0@gmail.com</li>
+      <li>номер: нету</li>
+      <li>город: не указан</li>
+      <li>регион: не указан</li>
+      <li>страна: Россия</li>
+      <li><a href="RSS/kesovstavros.rss.xml">RSS</a>
+     </ul>
+   
+      <h2>написать письмо</h2>
+   <form action="mailto:kesovstavros0@gmail.com" method="GET">
+
+    <textarea name="email" Placeholder="ваш email" type="email" ></textarea><br>
+
+    <textarea name="body" Placeholder="сообщение"></textarea><br>
+    
+    
+
+    <input type="submit" value="отправить" /><br>
+
+</form> 
+    </body>
+  </html>
+    
+    
+
+                ]]>
+            </turbo:content>
+        </item>
+        <item turbo="true">
+            ...
+            <turbo:content>
+                <![CDATA[
+                    
+<html lang="ru">
+
+<head>
+	<script src="https://kesalov.github.io/kesalov.singin.min.js"></script><script>
+	if ( username == "Кесов Ставрос") {
+		document.deleteElementById('subscribe');
+		else {
+			
+			};
+			
+			</script>
+<script src="https://kesalov.github.io/social/js/sub.js" ></script>
+ <title>Кесов Ставрос</title>
+  <link rel="stylesheet" href="/social/profile.css">
+  <h1><img src="https://yt3.ggpht.com/sKHKE_fCUlDOxFWIQWcJJv7CkELFdLbRSp_j5Y-t9HtFZE0RHpMuXYqTM5nECfZIpIvw36ppMw=s100-c-k-c0x00ffffff-no-rj" width="100" height="100" alt="profile" > Кесов Ставрос</h1>
+  <h2>пользователь</h2>
+  <h2>админ</h2>
+  </head>
+  <body>
+  <button id="subscribe" style="backround-color: gray;">вы подписаны</button>
+  
+    <ul>
+      <li><a href="https://m.youtube.com/channel/UCi-8Iq3iZEaOVTRPw1mfqnQ/"><img src="https://avatars.mds.yandex.net/get-entity_search/5508932/551805258/S122x122Fit_2x" alt="youtube" width="50" height="25"></a><script src="https://apis.google.com/js/platform.js"></script>
+
+<div class="g-ytsubscribe" data-channelid="UCi-8Iq3iZEaOVTRPw1mfqnQ" ></div>
+
+</li>
+      <li>почта: kesovstavros0@gmail.com</li>
+      <li>номер: нету</li>
+      <li>город: не указан</li>
+      <li>регион: не указан</li>
+      <li>страна: Россия</li>
+      <li><a href="RSS/kesovstavros.rss.xml">RSS</a>
+     </ul>
+   
+      <h2>написать письмо</h2>
+   <form action="mailto:kesovstavros0@gmail.com" method="GET">
+
+    <textarea name="email" Placeholder="ваш email" type="email" ></textarea><br>
+
+    <textarea name="body" Placeholder="сообщение"></textarea><br>
+    
+    
+
+    <input type="submit" value="отправить" /><br>
+
+</form> 
+    </body>
+  </html>
+    
+    
+
+                ]]>
+            </turbo:content>
+        </item>
+        ...
+    </channel>
+</rss>
