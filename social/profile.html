@@ -193,7 +193,9 @@ if (avatarUrl!== "") {
 
 
 </script>
-	
+<script>
+	var yatoken = get_cookie("yatoken");
+</script>
 		
 
 <html>
@@ -203,7 +205,7 @@ if (avatarUrl!== "") {
  
 <div class="avatar"></div>
 <div class="get_cookie"></div>
-<label onclick="var avatarUrl = prompt('введите URL аватара')">выбрать аватар</label >
+<script>document.write('ваш яндекс токен: ' + yatoken);</script>
 
 
 
