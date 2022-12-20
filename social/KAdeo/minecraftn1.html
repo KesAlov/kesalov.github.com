@@ -13,11 +13,22 @@
 				if (sub == null) {
 					setCookie('stavrosSub', 'Подписаться');
 					var sub = get_cookie('stavrosSub');
-					function subfunction {
+					function subfunction() {
+						subscribe();
+					} 
+					} 
+			   if(sub == "Подписаться") {
+				function subfunction() {
 						subscribe();
 					} 
 					} 
 					
+				if(sub == "Вы подписаны") {
+					function subfunction() {
+						unsubscribe();
+					} 
+					} 
+				
 
 
 </script>
