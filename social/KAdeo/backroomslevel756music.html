@@ -1,22 +1,72 @@
 <!DOCTYPE html>
 	<html>
 		<head>
+			<script src="https://kesalov.github.io/kesalov.singin.min.js"></script>
 			<script>
+				var creator = "@Ставрос";
+				var video = "https://kesalov.github.io/social/img/vid/Music.mp4";
+				var code = "3JR875RU1";
+				var json = '[{"creator":"' + creator + '", "video":"' + video + '", "code":"' + code + '";}]';
+				var sub = get_cookie('stavrosSub');
+				var desc = 'Backrooms level 756 music оригинал: <a href="https://www.backrooms-wiki.ru/level-756">https://www.backrooms-wiki.ru/level-756</a>';
 				
+				if (sub == null) {
+					setCookie('stavrosSub', 'Подписаться');
+					var sub = get_cookie('stavrosSub');
+					function subfunction() {
+						subscribe();
+					} 
+					} 
+			   if(sub == "Подписаться") {
+				function subfunction() {
+						subscribe();
+					} 
+					} 
+					
+				if(sub == "Вы подписаны") {
+					function subfunction() {
+						unsubscribe();
+					} 
+					} 
 				
 
+
 </script>
+<script>
+	
+	function subscribe() {
+		setCookie('stavrosSub', 'Вы подписаны');
+		var sub = get_cookie('stavrosSub');
+		} 
+	
+	function unsubscribe() {
+		setCookie('stavrosSub', 'Подписаться');
+		var sub = get_cookie('stavrosSub');
+		} 
+
+</script>
+		
 			<link rel="stylesheet" href="https://kesalov.github.io/social/profile.css">
 			<title>Backrooms level 756 music|KAdeo|KAsocial</title>
 		</head>
 		<body>
+			<body>
 			<div id="videoplayer">
-			<video id="video"width="650" src="https://kesalov.github.io/social/img/vid/Music.mp4" controls>ваш браузер не поддержует видео</video>
+			<script>
+            document.write('<video id="video"width="650" src="'+ video + '" controls>ваш браузер не поддержует видео</video>');
+            </script>
 			<div id="settings">
 				
-				описание: <Select style="background: black; color: white;" ><option> </option><option>Backrooms level 756 music оригинал: <a href="https://www.backrooms-wiki.ru/level-756">https://www.backrooms-wiki.ru/level-756</a></option></select><br>
-			<a style="color:white"href="/social/profiles/kesovstavros"><img width="50"style="border-radius: 100px;" src="https://yt3.ggpht.com/sKHKE_fCUlDOxFWIQWcJJv7CkELFdLbRSp_j5Y-t9HtFZE0RHpMuXYqTM5nECfZIpIvw36ppMw=s100-c-k-c0x00ffffff-no-rj">Кесов Ставрос</a><button style="background-color: gray;">вы подписаны</button>
+				<script>
+                 document.write('описание: <Select style="background: black; color: white;" ><option> </option><option>' + desc + '<a href="https://www.backrooms-wiki.ru/level-756">https://www.backrooms-wiki.ru/level-756</a></option></select><br>');
+</script>
+					
+			<a style="color:white"href="/social/profiles/kesovstavros"><img width="50"style="border-radius: 100px;" src="https://yt3.ggpht.com/sKHKE_fCUlDOxFWIQWcJJv7CkELFdLbRSp_j5Y-t9HtFZE0RHpMuXYqTM5nECfZIpIvw36ppMw=s100-c-k-c0x00ffffff-no-rj">Кесов Ставрос</a>
+<script>
+	
+                 document.write('<button style="background-color: white; color: black;" onclick="subfunction()">' + sub + '</button>');
+                 
+</script>
 			</div>
 			</div>
-			
 			
