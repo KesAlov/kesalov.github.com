@@ -9,6 +9,9 @@
 				var json = '[{"creator":"' + creator + '", "video":"' + video + '", "code":"' + code + '";}]';
 				var sub = get_cookie('stavrosSub');
 				var desc = 'Backrooms level 756 music оригинал: <a href="https://www.backrooms-wiki.ru/level-756">https://www.backrooms-wiki.ru/level-756</a>';
+				var email = "kesovstavros0@gmail.com";
+				var vidname = "Backrooms level 756 music";
+				
 				
 				if (sub == null) {
 					setCookie('stavrosSub', 'Подписаться');
@@ -57,6 +60,7 @@
             </script>
 			<div id="settings">
 				
+				
 				<script>
                  document.write('описание: <Select style="background: black; color: white;" ><option> </option><option>' + desc + '<a href="https://www.backrooms-wiki.ru/level-756">https://www.backrooms-wiki.ru/level-756</a></option><option>' + video + " " + code + '</option></select><br>');
 </script>
@@ -72,6 +76,12 @@
 	             document.write('<input type="hidden" value="' + json + '">');
 	
 </script>
+<script>
+	document.write('<form id="comment" action="mailto:' +email + '"><textarea id="body" name="body" Placeholder="комментарий"></textarea><input type="hidden" id="subject" name="subject" value="Новый комментарий на ваше видео' + vidname + '"><br><button type="submit" class="submit" width="60" height="75">отправить</button><button type="reset" style="background-color: blue;">очистить</button></form>');
+	
+</script>
+
+
 			</div>
 			</div>
 			
