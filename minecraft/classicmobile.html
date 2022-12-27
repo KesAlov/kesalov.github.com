@@ -30,5 +30,13 @@
 <div id="mobile"><div id="text_vertical"><P><H2>Sorry!</H2></P><P>This version of Minecraft<br>requires a keyboard.</P><P>Please try again on another device.</P></div></div>
 <div id="webgl_webrtc"><div id="text_vertical"><P><H2>Sorry!</H2></P><P>It seems like your browser doesn’t support<br>WebGL or WebRTC that is required to run this game.<P><P>Find a new one at <a href="https://browsehappy.com" target="_blank">https://browsehappy.com</a></P></div></div>
 
-<script src="https://classic.minecraft.net/assets/js/app.js"></script></body>
+<script src="https://classic.minecraft.net/assets/js/app.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+	
+	$("#myPage").on("pageshow", function( event ) {
+        $("#myPage").find('input:first').focus();
+} );
+</script>
+</body>
 </html>
