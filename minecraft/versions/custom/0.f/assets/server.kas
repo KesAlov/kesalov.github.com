@@ -1,0 +1,10 @@
+[{"kascript":"1.0","import":"com.mojang.minecraft", "import":"com.mojang.minecraft.multiplayer","import":"com.java.javascript",
+"database":"[{'player':username, 'players':players+player"}]","import":json"database.kadb","minecraft":{
+"block":"sad":{
+"function":{
+"image":players.image
+}
+
+} 
+
+
