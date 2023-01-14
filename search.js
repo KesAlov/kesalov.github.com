@@ -1,4 +1,4 @@
 function search() {
 			var searchcontent = document.getElementById('search').value;
-			document.write( '<head><title>KesAlov поисковая система</title><script src="https://kesalov.github.io/search.js"></script><link rel="icon" href="https://kesalov.github.io/kps.png"><h1><img src="https://kesalov.github.io/kps.png" width="190">KesAlov поисковая система</h1><h3>или же</h3><h2>браузер в браузере</h2>' +' <style>button{background-color: cyan;width: 7%;height: 5%;} input {border: 1px solid black;border-radius: 3px; width: 30%;height: 5%;}</style> </head><body><input type="search" id="search" Placeholder="поиск"><button onclick="search() ;" >найти</button><br>' + '<iframe src="' + searchcontent + '" width="100%" height="100%"></iframe>' + </body></html>' );
+			document.write('<input type="search" id="search" Placeholder="поиск"><button onclick="search();" >найти</button>' + '<iframe src="' + searchcontent + '" width="100%" height="100%"></iframe>' );
 } 
