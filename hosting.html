@@ -8,7 +8,7 @@ function save() {
 function genurl(domain, code) {
 	var code = document.getElementById("code").value
 	var domain = document.getElementById("domain").value; 
-	var url = "data:text/html,<!--" + domain + "-->" + code;
+	var url = "<input type='text' value='data:text/html,<!--" + domain + "-->" + code "'>";
 	document.write(url);
 	}
 	
