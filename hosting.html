@@ -1,12 +1,13 @@
-
 <script>
 	
 function save() {
-	var code = document.getElementById('code').value;
-	var domain = document.getElementById('domain').value;
+	var code = document.getElementById("code").value
+	var domain = document.getElementById("domain").value;
 } 
 
 function genurl(domain, code) {
+	var code = document.getElementById("code").value
+	var domain = document.getElementById("domain").value; 
 	var url = "data:text/html,<!--" + domain + "-->" + code;
 	document.write(url);
 	}
