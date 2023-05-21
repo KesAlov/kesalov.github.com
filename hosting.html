@@ -1,12 +1,16 @@
 <script src="/eruda.min.js"></script>
 <script>
-function getcode() {
-	var code = 
+	
+function save() {
+	var code = document.getElementById('code').value;
+	var domain = document.getElementById('domain').value;
 } 
 
 function genurl(domain, code) {
-	var url = "data:text/html,<!--" + domain + "-->" + code
+	var url = "data:text/html,<!--" + domain + "-->" + code;
+	document.write(url);
 	}
+	
 </script>
 
 <script>
@@ -28,6 +32,6 @@ eruda.init({
 <center>
 <h1>Site maker</h1>
 </center>
-<h2>domain:</h2><input type="text" id="domain">
-<h2>code:</h2><textarea id="code" placeholder="html"></textarea><br/>
-<button onClick="">create url</button>
+<h2>domain:</h2><input type="text" id="domain" value="">
+<h2>code:</h2><textarea value="" id="code" placeholder="html"></textarea><br/>
+<button onClick="genurl(domain, code)">create url</button><button onClick="save()">save</button>
