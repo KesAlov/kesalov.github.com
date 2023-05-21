@@ -1,4 +1,44 @@
 <script>
+
+
+function copyTextToClipboard(text) {
+  var textArea = document.createElement("textarea");
+
+
+  textArea.style.width = '2em';
+  textArea.style.height = '2em';
+
+  // We don't need padding, reducing the size if it does flash render.
+  textArea.style.padding = 0;
+
+  // Clean up any borders.
+  textArea.style.border = 'none';
+  textArea.style.outline = 'none';
+  textArea.style.boxShadow = 'none';
+
+  // Avoid flash of the white box if rendered for any reason.
+  textArea.style.background = 'transparent';
+
+
+  textArea.value = text;
+
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('копировано ' + msg);
+  } catch (err) {
+    console.log('неудалось копировать');
+  }
+
+  document.body.removeChild(textArea);
+} 
+
+</script>
+<script>
 	
 function save() {
 	var code = document.getElementById("code").value
@@ -8,8 +48,10 @@ function save() {
 function genurl(domain, code) {
 	var code = document.getElementById("code").value
 	var domain = document.getElementById("domain").value; 
-	var url = "<input type='text' value='data:text/html,<!--" + domain + "-->" + code "'>";
+	var url = "'data:text/html,<span style='color:white;'>" + domain + "</span>"+ code;
+	alert("URL copied to chilboard") 
 	document.write(url);
+	copyTextToClipboard(url)
 	}
 	
 </script>
