@@ -48,7 +48,7 @@ function save() {
 function genurl(domain, code) {
 	var code = document.getElementById("code").value
 	var domain = document.getElementById("domain").value; 
-	var url = "'data:text/html,<span style='color:white;'>" + domain + "</span>"+ code;
+	var url = "data:text/html,<span style='color:white;'>" + domain + "</span>"+ code;
 	alert("URL copied to chilboard") 
 	document.write(url);
 	copyTextToClipboard(url)
