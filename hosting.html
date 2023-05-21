@@ -1,4 +1,13 @@
 <script src="/eruda.min.js"></script>
+<script>
+function getcode() {
+	var code = 
+} 
+
+function genurl(domain, code) {
+	var url = "data:text/html,<!--" + domain + "-->" + code
+	}
+</script>
 
 <script>
 
@@ -15,6 +24,10 @@ eruda.init({
 
 
 </script>
+<script src="kesalov.singin.min.js"></script>
 <center>
-<h1>Site maker<h1>
-<center>
+<h1>Site maker</h1>
+</center>
+<h2>domain:</h2><input type="text" id="domain">
+<h2>code:</h2><textarea id="code" placeholder="html"></textarea><br/>
+<button onClick="">create url</button>
