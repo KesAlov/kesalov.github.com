@@ -1,3 +1,23 @@
+<style>
+	.menu{
+	background-color:white;
+	} 
+	.menu ul{
+		display: inline;
+		list-style:none;
+		}
+	.submenu{
+		display:none;
+		}
+	 ul Li:hover .submenu{
+		display:block;
+		} 
+		a.none{
+			color:black;
+			text-decoration:none
+			} 
+		  
+</style>
 <script>
 
 
@@ -54,16 +74,28 @@ function genurl(domain, code) {
 	copyTextToClipboard(url)
 	}
 	
+	function download(){
+	var code = document.getElementById("code").value
+	var dowurl = "data:text/html," + code
+	} 
+	
 </script>
 <script src="kesalov.singin.min.js"></script>
 <center>
+<div class:"menu">
 <ul>
-	<li>file
+	<li><a  href="#">file</a>
 <ul>
-<li>download</li>
+	<div class="submenu">
+<li><a onclick="download()" href="dowurl" download>download</a></li>
+</div>
 </ul>
 </li>
+<li>
+	<a href="#" class:"none">help</a>
+</li>
 </ul>
+</div>
 
 <h1>Site maker</h1>
 </center>
