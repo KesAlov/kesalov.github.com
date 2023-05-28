@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+	<html>
+		<head>
+			<script src="https://kesalov.github.io/kesalov.singin.min.js"></script>
+			<link rel="stylesheet" href="style.css">
+			<script>
+				if (username="undefined") {
+				var username=prompt("введите ник");
+					setCookie("username", username, 30)
+					setCookie("kapoints", 0,30)
+				} else{
+					document.write("<h2 style='color:white;background-color:teal'>" + username + "</h2>");
+				var kapoints= get_cookie("kapoints"); 
+					
+					} 
+			</script>
+			<span><h1>KA GAMES</h1>
+			<h2>создавать</h2>
+			</head>
+			<body>
+	<button onClick="location.href='editor.html'">новая игра</button>
+	
