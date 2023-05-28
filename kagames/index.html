@@ -2,14 +2,18 @@
 	<html>
 		<head>
 			<script src="https://kesalov.github.io/kesalov.singin.min.js"></script>
+			<link rel="stylesheet" href="style.css">
 			<script>
-				document.write("<h2 style='color:white;background-color:teal'>" + username + "</h2>")
+				if(username!="undefined"){
+				document.write("<h2 style='color:white;background-color:teal'>" + username + "</h2>");
 				var kapoints= get_cookie("kapoints");
-				if(kapoints=""){
-					setCookie("kapoints", "0", 1);
+				} else{
+					var username=prompt("введите ник");
+					setCookie("username", username, 30)
+					setCookie("kapoints", 0,30)
 					} 
 			</script>
-			<span><h1>KA GAMES</h1><h2>your kapoints: <script>document.write(kapoints)</script></h2></span>
+			<span><h1>KA GAMES</h1><h2>твои kapoints: <script>document.write(kapoints)</script><button onClick="delete_cookie('username'); document.location.reload( );"> Выйти</button> </h2></span>
 		<h1>
 			NEW GAMES
 		</h1>
