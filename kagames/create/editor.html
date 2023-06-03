@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+	<html>
+		<head>
+			<script src="https://kesalov.github.io/kesalov.singin.min.js"></script>
+			<script>
+				function instbutton() {
+					document.write("<button parent='" + document.getElementById("parent").value + "'id='" + prompt("ID")+"'>");
+					document.write(prompt("текст"));
+					document.write("</button>");
+					setCookie("code", get_cookie("code") +"<button parent='" + document.getElementById("parent").value + "'id='" + prompt("ID")+"'>"+prompt("текст")+"</button>");
+			        window.location.href="https://kesalov.github.io/kagames/create/editor.html"
+					}
+			</script>
+			<div name="panel"><button onClick="instbutton()">кнопка</button><img alt="изображение" src="https://raw.githubusercontent.com/KesAlov/kesalov.github.com/main/kagames/Screenshot_20230603_101240.jpg" width="25">изображение</img><img src="data:image/gif;base64,R0lGODlhFgAWAIQcAB1ChBFNsTRLYyJYwjljwl9vj1iE31iGzF6MnHWX9HOdz5GjuYCl2YKl8ZOt4qezxqK63aK/9KPD+7DI3b/I17LM/MrL1MLY9NHa7OPs++bx/Pv8/f///////////////yH5BAEAAB8ALAAAAAAWABYAAAWG4CeOZGmeaKqubOum1SQ/kPVOW749BeVSus2CgrCxHptLBbOQxCSNCCaF1GUqwQbBd0JGJAyGJJiobE+LnCaDcXAaEoxhQACgNw0FQx9kP+wmaRgYFBQNeAoGihCAJQsCkJAKOhgXEw8BLQYciooHf5o7EA+kC40qBKkAAAGrpy+wsbKzIiEAOw==" width="50">скрипт</img>&nbsp;&nbsp;<button>текст</button>&nbsp;<button>стиль</button>&nbspфайл:<select id="parent"><option id="game">игра</option><option id="starterscripts">начальные скрипты</option><option id="storage">хранилище</option><option id="playerscripts">скрипты игрока</option><option id="chardata">персонаж</option><option id="style">стиль</option></select></div>
+			<div name="files">файлы:<div id="game">игра:<button>спавн</button></div><div id="starterscripts">начальные скрипты:</div><div id="storage">хранилище:</div><div id="playerscripts">скрипты игрока:</div><div id="chardata">персонаж:<img alt="изображение" src="https://raw.githubusercontent.com/KesAlov/kesalov.github.com/main/kagames/Screenshot_20230603_101240.jpg" width="25">skin</img></div><div id="style">стиль:</div></div>
+<body>
+	<div name="gamepreview">
+		<script>document.write(get_cookie(code))</script>
