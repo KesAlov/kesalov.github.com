@@ -13,12 +13,15 @@
 					}else{
 						document.write("твои kapoints:"+kapoints + "<br>")
 						} 
+						function loadgame(){
+							var gamename=document.getElementById("gameid").value;
+							set_cookie(code, get_cookie(gamename))
 				</script>
 			</head>
 			<body>
 				ваши игры: <script>var games=get_cookie(games);document.write(games);</script><br>
-				загрузить игру(введите ID)<br><textarea placeholder="ID"></textarea><br>
-				<button>загрузить</button>
+				загрузить игру(введите ID)<br><textarea placeholder="ID" id="gameid"></textarea><br>
+				<button onClick="" >загрузить</button>
 	<button onClick="location.href='editor.html'">новая игра</button>
 	
 	
