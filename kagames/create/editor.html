@@ -5,7 +5,7 @@
 			<script src="https://kesalov.github.io/kesalov.singin.min.js"></script>
 			<script>
 				var code = get_cookie("code");
-				if(code==""){
+				if(code==null){
 					set_cookie("code", '&lt;!--spawn location--!><br><span style="background-color:green">ПРИВЕТ МИР!</span>');
 					} else{
 						document.getElementById("code").value=code;
