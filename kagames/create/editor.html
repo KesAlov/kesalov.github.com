@@ -4,10 +4,18 @@
 		<head>
 			<script src="https://kesalov.github.io/kesalov.singin.min.js"></script>
 			<script>
-				
+				function sendtm(){
+					var name= prompt("название");
+					var code=document.getElementById("code");
+					set_cookie("code", code);
+					set_cookie(name, code);
+					set_cookie("games", get_cookie("games") +name);
+					window.location.href = "mailto:kesovstavros0@gmail.com?subject=newgame&body=код:" + code + " название:"+name+" разработчик:" + username
+					} 
 			</script>
-			<h1><div name="panel">Редактор игры</h1><br><script>document.write('<a target="_blank" href="'+ document.getElementById('code').value + '">посмотреть, как выглядит</a>')</script><a onClick="alert('могут быть проблемы с расшифровкой юникода')">(1 предупреждение)</a></div>
+			<h1><div name="panel">Редактор игры</h1><br></div>
 <body>
 	<div name="gameeditor">
-		код:<br/>
-		<textarea placeholder="код" id="code" >&lt;!--spawn location--!><br><span style="background-color:green">ПРИВЕТ МИР!</span></textarea>
+		<b>код:</b><br/>
+		<textarea placeholder="код" id="code" onClick="">&lt;!--spawn location--!><br><span style="background-color:green">ПРИВЕТ МИР!</span></textarea>
+		<button onClick="sendtm()"><b>отправить на модерацию</button>
