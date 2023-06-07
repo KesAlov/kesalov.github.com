@@ -13,13 +13,14 @@
 				function sendtm(){
 					var name= prompt("название");
 					var code=document.getElementById("code").value;
+					var acess = document.getElementById("acess").value;
 					set_cookie("code", code);
 					set_cookie(name, code);
 					set_cookie("games", get_cookie("games") +name);
-					window.location.href = "mailto:kesovstavros0@gmail.com?subject=newgame&body=код:" + code + " название:"+name+" разработчик:" + username
+					window.location.href = "mailto:kesovstavros0@gmail.com?subject=newgame&body=код:" + code + " название:"+name+" разработчик:" + user + " доступ:" + acess
 					} 
 			</script>
-			<h1><div name="panel">Редактор игры</h1><br></div>
+			<h1><div name="panel">Редактор игры</h1><br>доступ:<select id="acess"><option>публичный</option><option>по ссылке</option><option>запаролен</option><option>приватный</option></select></div>
 <body>
 	<div name="gameeditor">
 		<b>код:</b><br/>
