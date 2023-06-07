@@ -8,10 +8,10 @@
 			<h2>создавать</h2>
 			<script>
 				var kapoints = get_cookie("kapoints") 
-				if (kapoints = "undefined") {
-					setCookie("kapoints", 0)
+				if (kapoints == "") {
+					set_cookie("kapoints", 0)
 					}else{
-						document.write("your kapoints:"+kapoints)
+						document.write("твои kapoints:"+kapoints + "<br>")
 						} 
 				</script>
 			</head>
