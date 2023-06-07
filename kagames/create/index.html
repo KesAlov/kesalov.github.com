@@ -15,13 +15,15 @@
 						} 
 						function loadgame(){
 							var gamename=document.getElementById("gameid").value;
-							set_cookie(code, get_cookie(gamename))
+							set_cookie(code, get_cookie(gamename));
+							window.location.href = "https://kesalov.github.io/kagames/create/editor.html";
+							}
 				</script>
 			</head>
 			<body>
 				ваши игры: <script>var games=get_cookie(games);document.write(games);</script><br>
 				загрузить игру(введите ID)<br><textarea placeholder="ID" id="gameid"></textarea><br>
-				<button onClick="" >загрузить</button>
+				<button onClick="loadgame()" >загрузить</button>
 	<button onClick="location.href='editor.html'">новая игра</button>
 	
 	
