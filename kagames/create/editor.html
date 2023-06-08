@@ -16,7 +16,7 @@
 					var acess = document.getElementById("acess").value;
 					set_cookie("code", code);
 					set_cookie(name, code);
-					set_cookie("games", get_cookie("games") +name);
+					set_cookie("games", get_cookie("games")+ " , " +name);
 					window.location.href = "mailto:kesovstavros0@gmail.com?subject=newgame&body=код:" + code + " название:"+name + " доступ:" + acess
 					} 
 			</script>
