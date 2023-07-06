@@ -17,7 +17,7 @@
   	<script>
   	var url = location.href; 
 var url2 = url.substring(url.indexOf("?"));
-if (url2 == "comment=%20открыто%20через%20KaStore") confirm("спасибо что пользуйтесь KaStore");
+if (url2 == "comment=%20открыто%20через%20KaStore") alert("спасибо, что пользуйтесь KaStore");
 	
   </script>
       <link rel="icon" href="https://kesalov.github.io/social/img/KAsocial%20logotype.png" type="image/x-icon">
@@ -94,6 +94,24 @@ dir: 'auto'
 
   
 
+</script><script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyB4AFdPnhtFg3Wn9nYyiz6I9DkWgVgMUhY",
+    authDomain: "kasocial-93b0b.firebaseapp.com",
+    projectId: "kasocial-93b0b",
+    storageBucket: "kasocial-93b0b.appspot.com",
+    messagingSenderId: "65831462709",
+    appId: "1:65831462709:web:35270b8642091f5fc1ce7c"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
 </script>
     
 
