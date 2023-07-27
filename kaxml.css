@@ -6,6 +6,10 @@ description {
 	font-size: 15px;
 	}
 	
-text {
+label {
 	font-size: 15px;
 	}
+button {
+background-color:gray;
+font-size:10px;
+} 
