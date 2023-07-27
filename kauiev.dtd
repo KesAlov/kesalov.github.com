@@ -1,0 +1,12 @@
+<!ENTITY % events
+ "onclick     %Script;       #IMPLIED  -- a pointer button was clicked --
+  ondblclick  %Script;       #IMPLIED  -- a pointer button was double clicked--
+  onmousedown %Script;       #IMPLIED  -- a pointer button was pressed down --
+  onmouseup   %Script;       #IMPLIED  -- a pointer button was released --
+  onmouseover %Script;       #IMPLIED  -- a pointer was moved onto --
+  onmousemove %Script;       #IMPLIED  -- a pointer was moved within --
+  onmouseout  %Script;       #IMPLIED  -- a pointer was moved away --
+  onkeypress  %Script;       #IMPLIED  -- a key was pressed and released --
+  onkeydown   %Script;       #IMPLIED  -- a key was pressed down --
+  onkeyup     %Script;       #IMPLIED  -- a key was released --"
+>
