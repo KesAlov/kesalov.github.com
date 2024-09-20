@@ -8,12 +8,15 @@
     } 
     function createfile(path, content) {
       set_cookie(path, content) 
-      set_cookie("files", getCookie("files")+ path) 
+      set_cookie("files", getCookie("files")+ path + "\n") 
    } 
-    function dir() {} 
+    function dir() {
+      document.getElementById("files").innerHTML(getCookie("files")
+    } 
     
   </script>
 </head>
 <body>
-  
+  <button onClick="createfile(prompt('введите имя файла:'), prompt('введите содержимое:'))">создать файл</button>
+  <div id="files"></div>
 </dody>
