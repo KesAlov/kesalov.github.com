@@ -17,6 +17,6 @@
   </script>
 </head>
 <body>
-  <button onClick="createfile(Prompt('введите имя файла:'), Prompt('введите содержимое:'))">создать файл</button>
+  <button onClick="var fn = prompt('введите имя файла');var fc = prompt('введите содержимое файла');createfile(fn, fc)">создать файл</button>
   <div id="files"></div>
 </dody>
