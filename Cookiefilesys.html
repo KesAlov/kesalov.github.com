@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://kesalov.github.io/kesalov.singin.min.js"></script>
+  <script>
+    function getfile(path){
+      var filec = getCookie(path) 
+      alert("file " + path + filec) 
+    } 
+    function createfile(path, content) {
+      set_cookie(path, content) 
+      set_cookie("files", getCookie("files")+ path) 
+   } 
+    function dir() {} 
+    
+  </script>
+</head>
+<body>
+  
+</dody>
